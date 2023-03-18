@@ -1,0 +1,14 @@
+@import url("br_default.css");
+@import url("br_sm.css")  (min-width :  576px);
+@import url("br_md.css")  (min-width :  768px);
+@import url("br_lg.css")  (min-width :  992px);
+@import url("br_xl.css")  (min-width : 1200px);
+@import url("br_xxl.css") (min-width : 1400px);
+
+/*
+ * This file will import all breakpoint css according to the screen size of the
+ * user.
+ *
+ * @package cpcss
+ * @version 0.1
+ */

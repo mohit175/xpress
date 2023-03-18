@@ -1,0 +1,14 @@
+@import url("base.css");
+@import url("vars.css");
+@import url("breakpoints.css");
+@import url("menu.css");
+@import url("form.css");
+@import url("buttons.css");
+
+/*
+ * This file will import all the css files and this will be the only file 
+ * required to be included in the html
+ *
+ * @package cpcss
+ * @version 0.1
+ */

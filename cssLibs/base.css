@@ -1,0 +1,33 @@
+/*
+ * This file will have the styles for the base css
+ *
+ * This will have all the base css that will be required for the framework
+ *
+ * @package cpcss
+ * @ver 0.1
+ */
+
+/* root font size that will be used to calculate rem*/
+:root {
+  font-size : 16px;
+}
+
+/* Default font family*/
+body{
+  font-family : Helvetica, sans-serif;
+  min-height : 100vh;
+  width : 100vw;
+  padding : 0px;
+  margin : 0px;
+  display : flex;
+}
+
+/* Box Sizing */
+*{
+  box-sizing : border-box;
+}
+
+/* hide */
+.hide{
+  display : none !important;
+}

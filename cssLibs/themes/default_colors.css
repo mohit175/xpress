@@ -1,0 +1,65 @@
+:root{
+  --menu-border-color : #000;
+  --primary-color : hsl(211deg, 100%, 50%);
+  --secondory-color : hsl(208deg, 7%, 46%);
+}
+
+.menu .menu-item{
+  --background-color : hsl(0deg, 6%, 27%);
+}
+
+.menu .menu-item:hover{
+  --background-color : hsl(0deg, 6%, 17%);
+}
+
+.menu .menu-item a{
+  --text-color : hsl(0deg, 0%, 97%);
+}
+
+.menu .menu-item a:hover{
+  --text-color : hsl(0deg, 0%, 100%);
+}
+
+.sub-menu .menu-item{
+  --background-color : hsl(0deg, 6%, 37%);
+}
+.sub-menu .menu-item:hover{
+  --background-color : hsl(0deg, 6%, 20%);
+}
+
+.login-form {
+  --input-bg-color : hsl(0deg, 0%, 42%);
+  --input-color : hsl(0deg, 0%, 100%);
+  --input-focus-color : hsl(0deg, 0%, 30%);
+}
+.login-form i{
+  --icon-color : hsl(59deg, 100%, 74%);
+}
+.login-form{
+  --placeholder-color : hsl(0deg, 0%, 90%);
+}
+.icon-required{
+  --icon-required-color : hsl(0deg, 100%, 50%);
+  --icon-required-bg : hsl(0deg, 0%, 100%);
+}
+.drag-upload{
+  --bg-color : hsl(0deg, 1%, 74%);
+}
+.drag-upload.highlight{
+  --bg-color : hsl(0deg, 1%, 95%);
+}
+.btn-default{
+  --background-color : hsl(211deg, 100%, 50%);
+  --color : hsl(0deg, 0%, 100%);
+  --shadow : 0 0 0 0.2rem rgb(0 123 255 / 50%);
+}
+.btn-default:hover{
+  --background-color : hsl(211deg, 100%, 40%);
+}
+
+.bg-primary{
+  background-color : var(--primary-color);
+}
+.bg-secondary{
+  background-color : var(--secondory-color);
+}

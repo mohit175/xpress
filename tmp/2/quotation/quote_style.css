@@ -1,0 +1,245 @@
+@page{
+  margin:0;
+  padding: 0;
+  size: 8.25in 11.75in;
+}
+:root{
+  font-size:15px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 1024px;
+  height: 1450px;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  font-size:15px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+.main_container{
+  width: 90%;
+  margin: 1% 3% 4% 7%;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+.row_container{
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+}
+.row-container div{
+  box-sizing: border-box;
+}
+.row_container .div-2{
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.grey-back .div-2{
+  background-color: #ddd;
+  font-weight:600;
+  box-sizing: border-box;
+}
+.sno{
+  width:3%;
+  box-sizing: border-box;
+}
+.estimate_no{
+  width:7%;
+  box-sizing: border-box;
+}
+.job_ref{
+  width:20%;
+  text-align:left;
+  padding: 0 0.5rem;
+}
+.desc{
+  width:40%;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+.hsn,.qty,.rate,.amount{
+  width: 10%;
+  box-sizing: border-box;
+}
+.gst{
+  width: 20%;
+  box-sizing: border-box;
+  display:flex;
+  border-collapse: collapse;
+  flex-flow: column;
+}
+.gst .row{
+  display:flex;
+  flex-grow:1;
+}
+.gst .row.top_gst{
+  display: table-caption;
+}
+.div-3{
+  width:33%;
+}
+.border-top{
+  border-top: 1px solid #000;
+}
+.bank-detail{
+  padding: 0px !important;
+}
+.bank-details .row{
+  display:flex;
+}
+.bank-detail-inner{
+  width:90%;
+  display:inline-block;
+  font-weight:600;
+}
+.bank-detail:after{
+  content:':';
+  font-weight:600;
+}
+.bank-details .row .div-2{
+  padding: 0px !important;
+  border-right: none !important;
+}
+h3{
+  margin: 0;
+  margin-bottom: 0.4rem;
+  text-decoration: underline;
+}
+h4{
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+.border-right{
+  border-right: 1px solid #000;
+}
+
+.cgst,.igst,.sgst{
+  display: table-cell;
+  flex-grow:1;
+}
+.w-70{
+  width: 70%;
+  text-align: left;
+}
+.w-30{
+  width: 30%;
+}
+.main-table{
+  display:flex;
+  flex-flow: column;
+  flex-grow:1;
+  border: 1px solid #000;
+  margin: 1.5rem 0;
+}
+.main-table .row_container{
+  display: flex;
+}
+.main-table .row_container:first-child{
+  font-weight: 600;
+}
+.main-table .row_container:last-child{
+  flex-grow:1;
+}
+.main-table .row_container{
+  text-align:center;
+}
+.main-table .row_container .desc{
+  text-align:left;
+}
+.gst-totals .div-3{
+  display:flex;
+}
+.float-right{
+  float:right;
+}
+.bill-amount{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.terms-block{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+.terms-block h4{
+  margin:0;
+}
+.sig-block{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  text-align: right;
+  font-size:1.2rem;
+}
+.sig-block .company_name{
+  font-weight: 600;
+}
+.text_amount{
+  text-transform:capitalize;
+}
+.company_address,.company_contact{
+  font-weight: 600;
+  text-align: center;
+}
+.company_container{
+  text-align: center;
+}
+.date{
+  margin-top: 0.5rem;
+}
+.pdf_top_text{
+  margin-top:1rem;
+}
+.pdf_bottom_text{
+  text-align:left;
+}
+.pdf_terms{
+  margin-top:1rem;
+  text-align:left;
+  width: 70%;
+}
+.top-margin{
+  min-height:8rem;
+}
+.text-left{
+  text-align:left;
+}
+.text-right{
+  text-align:right;
+}
+.padding{
+  padding: 0.5rem !important;
+  box-sizing: border-box;
+}
+.padding-top{
+  padding-top: 0.5rem !important;
+}
+.reverse-color{
+  color: #fff;
+  background: #000;
+}
+.company_name{
+  margin-bottom: 0px; 
+}
+.sig_row{
+  margin-top:1rem;
+}
+.sig_text{
+  text-align: left;
+  width: 30%;
+}
+.auto_text{
+  position: relative;
+  width: 100%;
+  font-size: 0.8rem;
+}
+.terms_sig{
+  display:flex;
+}

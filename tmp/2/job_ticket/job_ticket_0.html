@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel = "stylesheet" href = "../../../css/style.css" />
+  <link rel = "stylesheet" href = "../../../css/user.css" />
+	<link rel="stylesheet" href="../../../inc/templates/css/job_ticket.css" />
+</head>
+<body>
+  <div id="PDF_Options_Job_Ticket">
+    
+            <div class="modal-header">
+              <div class="header">
+                Job Ticket - <span class="module">SINGLE-SHEET</span>
+                <span class="close-modal">×</span>
+              </div><!-- END header -->
+            </div><!-- END modal-header -->
+            <div class="row space-between">
+              <div class="flex column container">
+                <h4>Job Reference (Name)</h4>
+                <div class="job_ref">Chunav Patrika Demy 1/8 Size 4/C Printing</div>
+              </div>
+              <div class="flex column container">
+                <h4>Quantity</h4>
+                <div class="quantity">12000</div>
+              </div>
+              <div class="flex column container">
+                <h4>Estimate No. &amp; Date</h4>
+                <div class="estimate_details">
+                  <span class="estimate_number">103</span>
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="estimate_date">30/09/2022 11:03</span>
+                </div>
+              </div>
+              <div class="flex column container">
+                <h4>Job Ticket No. &amp; Date</h4>
+                <div class="job_ticket_details">
+                  <span class="job_ticket_number"> </span>
+                  <span class="job_ticket_date"> </span>
+                </div>
+              </div>
+            </div>
+            <div class="row space-between">
+              <div class="flex column container w-50">
+                <h4>Customer Details / Shippiing Address</h4>
+                <div class="flex column">
+                  <div class="customer">eXpress Tech</div>
+                  <div class="address">AG-49, RBG Complex,  <br>Bahucharaji Road, Karelibag,<br>Vadodara-390018</div>
+                  <div class="contact_number">8604860412</div>
+                  <div class="customer_email">expresstech.in@gmail.com</div>
+                </div>
+              </div>
+              <div class="flex column container w-50">
+                <h4>
+                  Job Description
+                </h4>
+                <div class="job_description">Flyers (Handbills) <br>Paper: 130 GSM Art Paper.<br>Size: Demy (18"x23") 1/8  - Aprox. 5.5"x 8.5"<br>Printing: F/C Printing on Both Side of Handbill<br>Coating : Varnishing<br></div><!--END job_description -->
+              </div>
+            </div>
+            <div class="row space-between">
+              
+              <div class="flex column container">
+                <h4>Job</h4>
+                <select class="job back-red">
+                  <option value="" selected="selected">Select</option>
+                  <option value="New Order">New Order</option>
+                  <option value="Reprint Same">Reprint Same</option>
+                  <option value="Reprint With Changes">Reprint With Changes</option>
+                </select>
+              </div>
+              
+              <div class="flex column container">
+                <h4>Job Delivery Date</h4>
+                <input type="date" class="due_date back-red" data-date-format="mm/dd/yy" value="">
+              </div>
+              
+              <div class="flex column container">
+                <h4>Plate Type</h4>
+                <select class="plate_type back-red">
+                  <option value="" selected="selected">Select</option>
+                  <option value="CTcP">CTcP</option>
+                  <option value="Violet CTP">Violet CTP</option>
+                  <option value="Thermal CTP">Thermal CTP</option>
+                  <option value="POLY">POLY</option>
+                </select>
+              </div>
+              
+              <div class="flex column container">
+                <h4>Total Plates</h4>
+                <div class="total_plates">4</div>
+              </div>
+              
+            </div>
+            
+            <div class="row space-between">
+              <div class="flex column container">
+                <h4>Finish Size - Closed</h4>
+                <div class="closed_job_size">05.50 x 08.50</div>
+              </div>
+              
+              <div class="flex column container">
+                <h4>Finish Size - Open</h4>
+                <div class="open_job_size">05.50 x 08.50</div>
+              </div>
+              
+              <div class="flex column container">
+                <h4>Print-Run (Press) Size</h4>
+                <div class="machine_size">19.00 x 25.00</div>
+              </div>
+              
+              <div class="flex column container printing_sides">
+                <h4>Printing Side/s</h4>
+                <div class="print_sides">Single</div>
+              </div>
+              
+              <div class="flex column container stationery hide">
+                <h4>Job Size Format</h4>
+                <div> 1/<span class="job_size_format"> </span></div>
+              </div>
+              
+              <div class="flex column container hide book">
+                <h4>Book Size Format</h4>
+                <div class="book_size_format"></div>
+              </div>
+              
+            </div>
+            
+            <div class="row space-between book hide">
+              <div class="flex row">
+                
+                <div class="flex column container">
+                  <h4>Total Pages</h4>
+                  <div class="total_pgs"></div>
+                </div>
+                
+                <div class="flex column container">
+                  <h4>Book Quantity</h4>
+                  <div class="book_quantity"></div>
+                </div>
+                
+                <div class="flex column container">
+                  <h4>Binding Type</h4>
+                  <div class="binding_type">
+                    <select class="binding_type back-red">
+                      <option value="perfect" selected="selected">Perfect (Sheetwise)</option>
+                      <option value="saddle">Saddle (Center) Stitch</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="flex column container">
+                  <h4>Packing Details</h4>
+                  <select class="dispatch back-red">
+                    <option value="" selected="selected">Select</option>
+                    <option value="Loose">Loose</option>
+                    <option value="Wrapping">Wrapping</option>
+                    <option value="Boxing">Boxing</option>
+                  </select>
+                </div>
+                <div class="flex column container">
+                  <h4>Dispatch Mode</h4>
+                  <select class="dispatch back-red">
+                    <option value="" selected="selected">Select</option>
+                    <option value="Customer Will Pickup">Customer Will Pickup</option>
+                    <option value="Delivery By Courier">Delivery By Courier</option>
+                    <option value="Delivery By Transporter">Delivery By Transporter</option>
+                    <option value="Delivery By Employee">Delivery By Employee</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row stationery hide">
+              <div class="flex container table">
+                <div class="table-header">
+                  <h4>Books</h4>
+                  <h4>Sets in A <br>Book</h4>
+                  <h4>Copies in A <br>Set</h4>
+                </div>
+                <div class="table-row">
+                  <div class="books">&nbsp;</div>
+                  <div class="sets_in_book">&nbsp;</div>
+                  <div class="copies_in_set">&nbsp;</div>
+                </div>
+              </div>
+              <div class="flex container table">
+                <div class="table-header">
+                  <h4>Master <br> on M/c</h4>
+                  <h4>Ups in <br> Master</h4>
+                </div>
+                <div class="table-row">
+                  <div class="plate_master">&nbsp;</div>
+                  <div class="ups_in_master">&nbsp;</div>
+                </div>
+              </div>
+              <div class="flex container table">
+                <div class="table-header">
+                  <h4>Binding Type <br> &nbsp;</h4>
+                </div>
+                <div class="table-row">
+                  <div class="binding_type">&nbsp;</div>
+                </div>
+              </div>
+              
+              <div class="flex container table">
+                <div class="table-header">
+                  <h4>Binding <br> Side</h4>
+                </div>
+                <div class="table-row">
+                  <div class="binding_side_div">
+                    <select class="binding_side back-red">
+                      <option value="" selected="selected">Select</option>
+                      <option value="Loose">Loose</option>
+                      <option value="Side">Side</option>
+                      <option value="Top">Top</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="flex container table">
+                <div class="table-header">
+                  <h4>Numb'ng <br> Type</h4>
+                  <h4>Numb'ng <br> From</h4>
+                </div>
+                <div class="table-row">
+                  <div class="numb_type_div">
+                    <select class="numb_type back-red">
+                      <option value="" selected="selected">Select</option>
+                      <option value="None">None</option>
+                      <option value="Hand">Hand</option>
+                      <option value="M/c">M/c</option>
+                      <option value="Digital">Digital</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input type="text" class="numb_from back-red" value="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row process-row">
+              <div class="container inks-row">
+                <div class="front-inks div-2">
+                  <div class="row">
+                    <h4>Front Side Inks </h4>
+                  </div><!--END row -->
+                  <div class="pre-press single">
+                    <div class="plate_inks">
+                      <div class="instruction">
+                        Click to select color
+                      </div>
+                      <div class="flex column selected_colors">
+                        <div class="cmyk color-group">
+                          <div class="color hide"><input type="checkbox" class="C">C</div>
+                          <div class="color hide"><input type="checkbox" class="M">M</div>
+                          <div class="color hide"><input type="checkbox" class="Y">Y</div>
+                          <div class="color hide"><input type="checkbox" class="K">K</div>
+                        </div>
+                        <div class="row color-group spot_color"><div class="color hide"><input type="checkbox" class="sp_Black_Spot_">Black (Spot)</div><div class="color hide"><input type="checkbox" class="sp_Blue">Blue</div><div class="color hide"><input type="checkbox" class="sp_Blue_Dark">Blue Dark</div><div class="color hide"><input type="checkbox" class="sp_Brown">Brown</div><div class="color hide"><input type="checkbox" class="sp_Gray">Gray</div><div class="color hide"><input type="checkbox" class="sp_Green">Green</div><div class="color hide"><input type="checkbox" class="sp_Light_Brown">Light Brown</div><div class="color hide"><input type="checkbox" class="sp_Light_Green">Light Green</div><div class="color hide"><input type="checkbox" class="sp_Light_Red">Light Red</div><div class="color hide"><input type="checkbox" class="sp_Orange">Orange</div><div class="color hide"><input type="checkbox" class="sp_Red">Red</div></div>
+                      </div>
+                      <div class="flex column unselected_colors hide">
+                        <div class="cmyk color-group">
+                          <div class="color"><input type="checkbox" class="C">C</div>
+                          <div class="color"><input type="checkbox" class="M">M</div>
+                          <div class="color"><input type="checkbox" class="Y">Y</div>
+                          <div class="color"><input type="checkbox" class="K">K</div>
+                        </div>
+                        <div class="row color-group spot_color"><div class="color"><input type="checkbox" class="sp_Black_Spot_">Black (Spot)</div><div class="color"><input type="checkbox" class="sp_Blue">Blue</div><div class="color"><input type="checkbox" class="sp_Blue_Dark">Blue Dark</div><div class="color"><input type="checkbox" class="sp_Brown">Brown</div><div class="color"><input type="checkbox" class="sp_Gray">Gray</div><div class="color"><input type="checkbox" class="sp_Green">Green</div><div class="color"><input type="checkbox" class="sp_Light_Brown">Light Brown</div><div class="color"><input type="checkbox" class="sp_Light_Green">Light Green</div><div class="color"><input type="checkbox" class="sp_Light_Red">Light Red</div><div class="color"><input type="checkbox" class="sp_Orange">Orange</div><div class="color"><input type="checkbox" class="sp_Red">Red</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- END front-inks -->
+                <div class="back-inks div-2">
+                  <div class="row">
+                    <h4>Back Side Inks </h4>
+                  </div><!--END row -->
+                  <div class="pre-press single back-side">
+                    <div class="plate_inks disabled">
+                      <div class="no-backside">
+                        Single Side Printing Only
+                      </div>
+                      <div class="instruction hide">
+                        Click to select color
+                      </div>
+                      <div class="flex column selected_colors">
+                        <div class="cmyk color-group">
+                          <div class="color hide"><input type="checkbox" class="C">C</div>
+                          <div class="color hide"><input type="checkbox" class="M">M</div>
+                          <div class="color hide"><input type="checkbox" class="Y">Y</div>
+                          <div class="color hide"><input type="checkbox" class="K">K</div>
+                        </div>
+                        <div class="row color-group spot_color"><div class="color hide"><input type="checkbox" class="sp_Black_Spot_">Black (Spot)</div><div class="color hide"><input type="checkbox" class="sp_Blue">Blue</div><div class="color hide"><input type="checkbox" class="sp_Blue_Dark">Blue Dark</div><div class="color hide"><input type="checkbox" class="sp_Brown">Brown</div><div class="color hide"><input type="checkbox" class="sp_Gray">Gray</div><div class="color hide"><input type="checkbox" class="sp_Green">Green</div><div class="color hide"><input type="checkbox" class="sp_Light_Brown">Light Brown</div><div class="color hide"><input type="checkbox" class="sp_Light_Green">Light Green</div><div class="color hide"><input type="checkbox" class="sp_Light_Red">Light Red</div><div class="color hide"><input type="checkbox" class="sp_Orange">Orange</div><div class="color hide"><input type="checkbox" class="sp_Red">Red</div></div>
+                      </div>
+                      <div class="flex column unselected_colors hide">
+                        <div class="cmyk color-group">
+                          <div class="color"><input type="checkbox" class="C">C</div>
+                          <div class="color"><input type="checkbox" class="M">M</div>
+                          <div class="color"><input type="checkbox" class="Y">Y</div>
+                          <div class="color"><input type="checkbox" class="K">K</div>
+                        </div>
+                        <div class="row color-group spot_color"><div class="color"><input type="checkbox" class="sp_Black_Spot_">Black (Spot)</div><div class="color"><input type="checkbox" class="sp_Blue">Blue</div><div class="color"><input type="checkbox" class="sp_Blue_Dark">Blue Dark</div><div class="color"><input type="checkbox" class="sp_Brown">Brown</div><div class="color"><input type="checkbox" class="sp_Gray">Gray</div><div class="color"><input type="checkbox" class="sp_Green">Green</div><div class="color"><input type="checkbox" class="sp_Light_Brown">Light Brown</div><div class="color"><input type="checkbox" class="sp_Light_Green">Light Green</div><div class="color"><input type="checkbox" class="sp_Light_Red">Light Red</div><div class="color"><input type="checkbox" class="sp_Orange">Orange</div><div class="color"><input type="checkbox" class="sp_Red">Red</div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- END back-inks -->
+              </div>
+            </div><!-- END process-row -->
+          
+  </div>
+</body>
+</html>

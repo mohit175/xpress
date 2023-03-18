@@ -1,0 +1,51 @@
+@page{
+  margin:0;
+  padding: 0;
+  size: 8.25in 11.75in;
+}
+:root{
+  font-size:15px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 1024px;
+  height: 1450px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  font-size:15px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+.modal{
+  display:block !important;
+  background:none !important;
+  background-color:#fff !important;
+}
+.modal-body{
+  background: #fff;
+  padding: 0 6rem;
+  overflow: hidden;
+  max-height: unset;
+}
+.modal-header, .modal-footer{
+  background: #fff !important;
+  text-align:center;
+}
+.modal-content{
+  width:100% !important;
+  border: none;
+  margin-top: 2rem;
+}
+.modal-header .close{
+  display:none;
+}
+.modal-footer button{
+  display:none;
+}
+.process_details>div{
+  line-height:1.8rem;
+}
+.vendor_div{
+  display:none !important;
+}

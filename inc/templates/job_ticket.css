@@ -1,0 +1,291 @@
+@page{
+  margin:0;
+  padding: 0;
+  size: 8.25in 11.75in;
+}
+:root{
+  font-size:15px;
+}
+body{
+  margin: 0;
+  padding: 0;
+  width: 210mm;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  font-size:15px;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+}
+section.page-section{
+  height: 297mm;
+  margin: 7% 0% 7% 0%;
+}
+.main_container{
+  width: 90%;
+  margin: 0% 3% 0% 7%;
+  display: flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+.row_container{
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: row;
+}
+.row-container div{
+  box-sizing: border-box;
+}
+.row_container .div-2{
+  width: 50%;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+.grey-back .div-2{
+  background-color: #ddd;
+  font-weight:600;
+  box-sizing: border-box;
+}
+.sno{
+  width:3%;
+  box-sizing: border-box;
+}
+.est_no{
+  width:6%;
+  box-sizing: border-box;
+}
+.delivery .est_no,.delivery .sno{
+  width:8%;
+}
+.desc{
+  width:25%;
+  box-sizing: border-box;
+  padding: 0 0.5rem;
+}
+.delivery .desc{
+  width: 50%;
+  flex-grow: 1;
+}
+.hsn,.qty,.rate,.taxable{
+  width: 9%;
+  box-sizing: border-box;
+}
+.hsn,.qty{
+  width: 15%;
+}
+.gst{
+  width: 30%;
+  box-sizing: border-box;
+  display:flex;
+  border-collapse: collapse;
+  flex-flow: column;
+}
+.gst .row{
+  display:flex;
+  flex-grow:1;
+}
+.gst .row.top_gst{
+  display: table-caption;
+}
+.div-3{
+  width:33%;
+}
+.border-top{
+  border-top: 1px solid #000;
+}
+.bank-detail{
+  padding: 0px !important;
+}
+.bank-details .row{
+  display:flex;
+}
+.bank-detail-inner{
+  width:90%;
+  display:inline-block;
+  font-weight:600;
+}
+.bank-detail:after{
+  content:':';
+  font-weight:600;
+}
+.bank-details .row .div-2{
+  padding: 0px !important;
+  border-right: none !important;
+}
+h3{
+  margin: 0;
+  text-decoration: none;
+}
+h4{
+  background: #000;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  margin:0;
+}
+.border-right{
+  border-right: 1px solid #000;
+}
+
+.cgst,.igst,.sgst{
+  display: table-cell;
+  flex-grow:1;
+}
+.w-70{
+  width: 70%;
+  text-align: left;
+}
+.w-16{
+  width: 16%;
+}
+.w-17{
+  width: 17%;
+}
+.w-20{
+  width: 20%;
+}
+.w-25{
+  width: 25%;
+}
+.w-30{
+  width: 30%;
+}
+.w-45{
+  width: 45%;
+}
+.w-50{
+  width: 50%;
+}
+.row{
+  width: 100%;
+  display: flex;
+}
+.main-table{
+  display:flex;
+  flex-flow: column;
+  flex-grow: 1;
+}
+.main-table .row_container{
+  display: flex;
+}
+.main-table .row_container:first-child{
+  font-weight: 600;
+}
+.main-table .row_container:last-child{
+  flex-grow:1;
+}
+.main-table .row_container,.text-center{
+  text-align:center;
+}
+.main-table .row_container .desc{
+  text-align:left;
+}
+.gst-totals .div-3{
+  display:flex;
+}
+.float-right{
+  float:right;
+}
+.bill-amount{
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.bill-text{
+  font-weight: 600;
+}
+.terms-block{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding: 0.2rem;
+}
+.terms-block h4{
+  margin:0;
+}
+.sig-block{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  text-align: right;
+  min-height: 7rem;
+}
+.sig-block .company_name{
+  font-weight: 600;
+}
+.text_amount{
+  text-transform:capitalize;
+}
+.no-padding{
+  padding: 0 !important;
+}
+.padding{
+  padding: 0.5rem !important;
+  box-sizing: border-box;
+}
+.padding-top{
+  padding-top: 0.5rem !important;
+}
+.container{
+  display: flex;
+}
+.container div{
+  flex-grow: 0;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+h1{
+  margin: 0;
+}
+.last_row{
+  margin-bottom: 2.5rem;
+}
+.delivery_memo_title{
+  color:hsl(0deg, 0%, 50%);
+}
+.text-left{
+  text-align:left;
+}
+.text-right{
+  text-align:right;
+}
+.reverse-color{
+  color: #fff;
+  background: #000;
+}
+.reverse-color div{
+  border-color: #fff;
+}
+h2{
+  margin: 0;
+  font-size: 1rem;
+}
+.space-between{
+  justify-content: space-between;
+}
+.container{
+  border: 1px solid #000;
+  margin: 0.5rem;
+  padding: 0px;
+  flex-grow:1;
+}
+.flex.column{
+  flex-flow:column;
+}
+
+.table{
+  display: table;
+  width: 100%;
+}
+.table-header{
+  display:table-row;
+  font-weight: 600;
+
+}
+.table-row{
+  display:table-row;
+}
+.table-header div, .table-row div{
+  display:table-cell;
+  padding: 0.2rem 0.5rem;
+  }

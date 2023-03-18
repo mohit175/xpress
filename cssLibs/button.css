@@ -1,0 +1,33 @@
+/*
+ * This file will have the styles for the buttons
+ *
+ * This will make up the default button styles
+ *
+ * @package cpcss
+ * @ver 0.1
+ */
+
+/* TODO:
+ * Change all sizes from rem to variables that respond to font size or something
+ */
+
+.btn{
+  display : block;
+  font-weight : 400;
+  vertical-align : middle;
+  font-size : 1rem;
+  border-radius : 0.25rem;
+  padding : 0.375rem 0.75rem;
+  border : none;
+  cursor : pointer;
+}
+
+.btn-default{
+  background-color : var(--background-color);
+  color : var(--color);
+}
+
+.btn-default:hover{
+  background-color : var(--background-color);
+  box-shadow : var(--shadow);
+}

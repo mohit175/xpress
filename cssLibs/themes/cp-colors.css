@@ -1,0 +1,21 @@
+body{
+  --bg : hsl(21deg 92% 79%);
+}
+
+body.dark-theme{
+  --bg : hsl(0deg 0% 12%);
+  --color : #fff;
+}
+
+body.theme2{
+  --bg : hsl(180deg 79% 69%);
+}
+
+.top-bar{
+  --bg : hsl(0deg, 0%, 0%);
+  --color : hsl(176deg, 96%, 69%);
+}
+
+.nav{
+  --nav-bg : hsl(0deg, 5%, 21% / 95%);
+}

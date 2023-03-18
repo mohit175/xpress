@@ -1,0 +1,82 @@
+/*
+ * This file will have the styles for the default menu 
+ *
+ * This will make up the default menu and other menu styles as they are created
+ * will override this css file.
+ *
+ * @package cpcss
+ * @author Anil Desai <anil.h.desai@gmail.com>
+ * @copy 2021 eXpress Tech www.expresserp.in
+ * @ver 0.1
+ */
+
+/* Menu */
+.nav{
+  z-index : 1000;
+}
+.menu{
+  list-style: none;
+  padding-inline-start : 0px;
+}
+.vertical-menu{
+  margin-block-start : 0px;
+  margin-block-end : 0px;
+  padding-top : var(--vertical-padding);
+  padding-bottom : var(--vertical-padding);
+}
+.menu .menu-item{
+  display : block;
+  flex : 1 1 0px;
+  flex-grow : 1;
+  text-align : center;
+  border : 1px solid var(--menu-border-color);
+  border-radius : var(--border-radius);
+  box-sizing : border-box;
+  margin : var(--margin);
+  background-color : var(--background-color);
+  cursor : pointer;
+}
+
+.vertical-menu > :first-child{
+  margin-top : 0px;
+}
+
+.vertical-menu > :last-child{
+  margin-bottom : 0px;
+}
+
+
+.sub-menu .menu{
+  position : relative;
+}
+
+.menu .menu-item a{
+  text-decoration : none;
+  color : var(--text-color);
+  font-weight : 600;
+  width : 100%;
+  display : block;
+  padding : var(--padding);
+  box-sizing : border-box;
+} 
+
+.menu .menu-item:hover{
+  background-color : var(--background-color); 
+}
+
+@media ( min-width : 576px){
+  
+  .sub-menu .menu{
+    position : absolute;
+    display : block;
+    width : inherit;
+  }
+  
+  .vertical-menu .sub-menu .menu{
+    position : relative;
+  }
+
+  .menu.vertical-menu{
+    display : block;
+  }
+}
