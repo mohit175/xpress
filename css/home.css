@@ -1,0 +1,50 @@
+body{
+  background : #000;
+  margin     : 0px;
+  padding    : 0px;
+}
+.pentagon{
+  cursor    : pointer;
+  color     : #f09523;
+  max-width : 16vw;
+  padding   : 2%;
+}
+.pentagon a{
+  text-decoration : none;
+  color           : #f09523;
+  width           : 100%;
+  text-align      : center;
+  display         : block;
+}
+.pentagon img{
+  width : 100%;
+}
+.pentagon img:hover{
+  background-color : #4d4d4d;
+  opacity          : 0.3;
+}
+.container{
+  display         : flex;
+  flex-flow       : column;
+  align-items     : center;
+  justify-content : center;
+  width           : 100vw;
+  height          : 100vh;
+}
+
+.row{
+  display : flex;
+}
+
+.hide{
+  display: none;
+}
+
+.choose_home{
+  width: 50%;
+  float: left;
+  color: #fff;
+  font-weight: 900;
+  font-size: 5em;
+  cursor: pointer;
+}

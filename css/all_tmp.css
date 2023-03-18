@@ -1,0 +1,3811 @@
+@import url("vars.css");
+@import url("colors.css");
+@page{
+  margin:0;
+  padding: 0;
+  size: 8.25in 11.75in;
+}
+@media (max-width:1279.5px){
+  :root{
+    font-size : 10px;
+  }
+}
+@media (min-width:1279.6px) and (max-width:1359.5px){
+  :root{
+    font-size : 11.5px;
+  }
+}
+@media (min-width:1359.6px) and (max-width:1439.5px){
+  :root{
+    font-size : 13px;
+  }
+}
+@media (min-width:1439.6px) and (max-width:1539.5px){
+  :root{
+    font-size : 13.2px;
+  }
+}
+@media (min-width:1539.6px) and (max-width:1679.5px){
+  :root{
+    font-size : 14px;
+  }
+}
+@media (min-width:1679.6px) and (max-width:1919.5px){
+  :root{
+    font-size : 15px;
+  }
+}
+@media (min-width:1919.6px){
+  :root{
+    font-size : 16px;
+  }
+}
+html,
+body {
+  height : 100vh;
+  width : 100%;
+  display : flex;
+  flex: 1 1 auto;
+  flex-flow : column;
+  margin : 0;
+  font-size : 1rem;
+  box-sizing : border-box;
+  background : var(--background);
+  font-family: 'Montserrat', sans-serif;
+  /*font-family : -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji*/
+}
+textarea,input{
+  font-family: 'Montserrat', sans-serif;
+}
+nav{
+  background : var(--background);
+  border-top : 2px solid var(--border-color);
+  flex : 1 1 auto;
+}
+
+nav ul{
+  list-style : none;
+  background : var(--background);
+  color : var(--color);
+  /*font-family : "RobotoLight", "Helvetica Neue", Helvetica, sans-serif;*/
+  line-height : 21px;
+  font-size : 12px;
+  padding-left : 0px;
+  margin : 0px;
+}
+
+nav ul li:hover{
+  background : var(--background);
+  color : var(--color);
+}
+
+nav ul li{
+  padding : 7px 0px 7px 15px;
+  border-bottom : 1px solid var(--border-color);
+  cursor : pointer;
+}
+
+header, footer{
+  flex : 1 1 auto;
+  flex-basis: 6%;
+}
+
+header{
+  background : var(--top-color);
+  display : flex;
+  flex-flow : row;
+  align-items : center;
+  justify-content : start;
+}
+
+footer{
+  background : var(--bottom-color);
+}
+
+main{
+  flex : 1 1 auto;
+  padding : 1rem; 
+}
+
+label{
+  font-weight : 600;
+  padding-right : 1rem;
+}
+
+input, input:focus-visible, textarea, textarea:focus-visible{
+  border : none;
+  outline : none;
+  margin-bottom : 0.3rem;
+}
+
+.main-container{
+  display : flex;
+  flex-flow : row;
+  flex-basis : 88%;
+}
+
+.right-container{
+  flex : 1 1 auto;
+  flex-basis : 80%;
+  display: flex;
+  flex-flow: column;
+}
+
+.left-container{
+  flex : 1 1 auto;
+  flex-basis : 20%;
+  display : flex;
+  flex-flow: column;
+}
+
+.logo-container{
+  flex : 0 1 auto;
+  flex-basis : 6%;
+}
+
+.logo{
+  background-color : var(--background);
+  max-width : 100%;
+  padding : 5%;
+  box-sizing : border-box;
+}
+
+.table{
+  display : table !important;
+  width : 100%;
+  border-collapse: collapse;
+}
+
+.table-header{
+  display : table-row !important;
+}
+
+.table-header>div{
+  padding : 0.5rem;
+  display : table-cell !important;
+  border : 1px solid #959595;
+  font-weight : 600;
+}
+.table-header>div.hide{
+  display: none !important;
+}
+
+.table-header label, .table-header div, .table-header input, .table-header textarea{
+  display : table-cell;
+  border-collapse : collapse;
+}
+.table-header label.hide, 
+  .table-header div.hide, 
+  .table-header input.hide, 
+  .table-header textarea.hide{
+  display: none !important;
+}
+
+.table-row{
+  display : table-row !important;
+}
+
+.table-row:nth-child(odd),.grid-row:nth-child(odd){
+	background-color: #fff;
+}
+
+.table-row:nth-child(even),.grid-row:nth-child(even){
+	background-color: #d2deb4;
+}
+
+.table-row>label, .table-row>div, .table-row>input, .table-row>textarea{
+  display : table-cell !important;
+  border : 1px solid #959595;
+}
+.table-row>label.hide, .table-row>div.hide, .table-row>input.hide, .table-row>textarea.hide{
+  display : none !important;
+}
+
+.table-row div, .grid-row div{
+  padding : 0.2rem 0.5rem;
+}
+ .grid-row div{
+  border: 0px 1px solid #000;
+ }
+
+.modal{
+  position : absolute;
+  width : 100%;
+  height : 100%;
+  top : 0px;
+  left : 0px;
+  background : var(--modal-background);
+  display : flex;
+  align-items : center;
+  justify-content : center;
+}
+
+.modal-header, .modal-footer{
+  min-height : 3.5rem;
+}
+
+.modal-header{
+  background : var(--top-color);
+  padding : 5px 20px;
+}
+
+.modal-footer{
+  background : var(--bottom-color);
+	height: 4rem;
+  display : flex;
+  align-items : center;
+  justify-content : end;
+}
+
+.modal-body{
+  background : var(--background);
+  padding : 1rem;
+}
+
+.height, .width, .gsm{
+  width : 3rem;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+}
+
+.alert.success{
+  background-color: #04AA6D;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.btn{
+  background: var(--top-color);
+  border: 1px solid var(--top-color);
+  color: #000;
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+#add_paper_details .paper_name{
+  width: 100%;
+}
+
+#paperLibs{
+  display: flex;
+  flex-flow: column;
+}
+
+#paperLibs input{
+  width: 35%;
+}
+
+#paper_table input.type, #paper_table input.brand{
+  width: 7rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+#paper_table input.st_price{
+  width: 4rem;
+}
+
+.quote_highlight{
+  background-color: #f09423 !important;
+}
+
+.mm_hover_class{
+  font-weight: 600;
+  font-size: 0.8rem !important;
+  width: max-content !important;
+  text-align: center;
+}
+.mm_hover_class::after{
+  display:none !important;
+}
+
+.inks-row h4{
+  width:100%;
+}
+.inks-row input{
+  width:unset;
+}
+.table-row.color{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.color input{
+  display: inline !important;
+}
+.plate_inks .color-group, .plate_inks .color, .impose_colors .color{
+  margin:0;
+  padding:0 0.3rem;
+  white-space: nowrap;
+  display: inline-block !important;
+  float: left;
+}
+.plate_inks .color.hide,.impose_colors .color.hide{
+  display:none !important;
+}
+.pms{
+  margin-left: 2rem;
+}
+.pms input{
+  width: 90%;
+  margin-left: 0.5rem;
+  border: 1px solid #000;
+}
+/*.color-group div,.cmyk{
+  border: 1px solid #000;
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.5rem;
+  display: inline-block !important;
+  padding: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}*/
+.color input{
+  display: inline !important;
+  margin-right: 0.3rem !important;
+}
+.color-group input[type='checkbox'] {
+  width: unset;
+}
+.color input[type='text'] {
+}
+.cyan{
+  background: cyan;
+  color: black;
+}
+.magenta{
+  background: magenta;
+  color: black;
+}
+.yellow{
+  background: yellow;
+  color: black;
+}
+.black{
+  background: black;
+  color: white;
+}
+.flex{
+  display:flex !important;
+}
+.flex.column{
+  flex-flow: column;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+.address_container{
+  max-width: 35%;
+}
+#PDF_Options_Job_Ticket .modal-header{
+  margin: 0 0.5rem;
+}
+#PDF_Options_Job_Ticket h4{
+  background:#000;
+  color:#fff;
+  padding: 0.25rem 0.5rem;
+}
+#PDF_Options_Job_Ticket .container{
+  border: 1px solid #000;
+  margin: 0.5rem;
+  padding: 0px;
+  flex-grow:1;
+}
+#PDF_Options_Job_Ticket .container:last-child{
+  border-right: 1px solid #000;
+}
+#PDF_Options_Job_Ticket .container>div{
+  padding: 0.5rem;
+}
+#PDF_Options_Job_Ticket .container>div.table{
+  padding:0;
+}
+.table-header h4{
+  display: table-cell;
+}
+.job-type input[type='checkbox']{
+  width:unset;
+}
+.reprint-same,.reprint-with-changes{
+  margin-left:1rem;
+}
+ul.job-work{
+  padding-left:0;
+  margin: 0;
+  margin-left: 1rem;
+}
+.job-work li{
+  list-style: none;
+}
+.job-work li input[type='checkbox']{
+  width: unset;
+  margin-right: 1rem;
+}
+.move.container{
+  flex-grow: 0;
+  padding: 0.5rem;
+  justify-content: center;
+}
+.job-work-container{
+  width:45%;
+}
+.move-left,.move-right{
+  font-weight: 600;
+  transform: rotate(90deg);
+  cursor: pointer;
+  font-size:1.5rem;
+  margin-right: 2rem;
+}
+
+.job-work .name{
+  width: 1%;
+  white-space: nowrap;
+}
+.job-ticket-screenshot{
+  height: max-content;
+  max-height: unset;
+}
+.close-modal{
+  float:right;
+}
+.flex.no-grow{
+  flex-grow:0 !important;
+}
+#PDF_Options_Job_Ticket .modal-body{
+  background: #fff;
+}
+#PDF_Options_Job_Ticket .modal-body .table-row{
+  background: #fff;
+}
+#PDF_Options_Job_Ticket .book_size_format{
+  white-space:nowrap;
+}
+#PDF_Options_Job_Ticket .pages_in_each_sig_div{
+  white-space:nowrap;
+}
+.job-work .notes{
+  padding:0;
+}
+.cutting_diagram svg{
+  width:100%;
+  height: 100%;
+}
+.job-work .notes input{
+  padding:0;
+  padding-left:0.5rem;
+  margin:0;
+  text-align:left;
+}
+.width-unset{
+  width : unset;
+}
+.back-red{
+  background: #f09423 !important;
+}
+#new_spot_color_name{
+  width: 20rem;
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+}
+#main-page{
+  height:100vh;
+  display: flex;
+  flex-flow: column;
+}
+.hide{
+  display : none !important;
+}
+.post-process-table div.sign,
+  .post-process-table div.qty,
+  .post-process-table div.status{
+  width: 10%;
+  flex-grow: 0;
+}
+.pre-press .plate_inks{
+  width: 20%;
+}
+/*
+ * guides 1.2.9
+ * Simple way to highlighting DOM elements and guide your users with step-by-step welcome tours in your web app.
+ * https://github.com/ejulianova/guides
+ *
+ * Copyright 2015, Elena Petrova <elena.julianova@gmail.com>
+ * Released under the MIT license.
+*/
+
+.guides-canvas,.guides-mask,.guides-overlay{position:absolute;top:0;left:0;bottom:0;right:0}.guides-overlay{background:rgba(0,0,0,0.6);z-index:99996}.guides-mask{z-index:99998}.guides-current-element{z-index:99997;position:relative}@-webkit-keyframes fadeIn{0%{opacity:0}100%{opacity:.5}}@-moz-keyframes fadeIn{0%{opacity:0}100%{opacity:.5}}@-o-keyframes fadeIn{0%{opacity:0}100%{opacity:.5}}@keyframes fadeIn{0%{opacity:0}100%{opacity:.5}}.guides-fade-in{-webkit-animation:fadeIn .25s ease;-moz-animation:fadeIn .25s ease;-o-animation:fadeIn .25s ease;animation:fadeIn .25s ease}.guides-guide{color:#fff;font-size:1.5rem;text-shadow:0 0 10px #000;position:absolute;margin:5px;z-index:99999}.guides-guide svg{position:absolute;top:0;left:0}.guides-guide span{display:inline-block;padding:10px;font-size:2rem}.guides-top svg{top:auto;bottom:0}.guides-left svg{left:auto;right:0}
+/*generic css */
+html{
+  font-size: 1rem;
+}
+body{
+	background: #000;
+	/*font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
+	margin: 0px;
+	height: 100vh;
+	overflow: hidden;
+}
+*{
+	box-sizing: border-box;
+}
+input{
+	width: 100%;
+  padding-right: 5px;
+	font-size: 1.2rem;
+	text-align: right;
+	line-height: 1.5rem;
+	outline: none;
+	border: none;
+}
+
+input:disabled{
+	background-color: rgb(221,221,221);
+}
+
+textarea{
+	width: 90%;
+	height: 99%;
+	border-radius: 5px;
+	/*font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;*/
+}
+
+.container{
+	margin: 0.5vw;
+}
+
+/*custom div widths*/
+.div-2{
+	width: 50%;
+	float: left;
+}
+
+.div-3{
+	width: 32.2%;
+	margin: 0.35%;
+}
+
+.div-4{
+	width: 25%;
+}
+
+.div-4-3{
+	width: 73%;
+}
+
+.div-5{
+	width: 18.8%;
+	margin: 0.5vw;
+}
+.div-6{
+	width: 15.48%;
+}
+.bottom-row .div-5:last-child{
+	margin-right: 0px;
+}
+/*END custom div widths*/
+
+/* custom row width, height*/
+.row{
+	width: 100%;
+}
+
+.row div{
+	display: block;
+}
+
+.row-1{
+	height: 100%;
+}
+
+.row-2{
+	height: 50%;
+}
+
+.row-3{
+	height: 33%;
+}
+/*END custom row width, height*/
+/*END generic css*/
+
+/* modal css for all modals*/
+.modal {
+  z-index: 1; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:2000;
+}
+
+.modal-header {
+	background-color: #f09423;
+	padding: 5px 20px;
+	font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal-footer {
+	background-color: #799a27;
+	height: 4rem;
+  display : flex !important;
+  align-items : center;
+  justify-content : end;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #888;
+  width: 95%; 
+}
+
+.close {
+  color: #545353;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*END modal css for all modals*/
+
+/*css for home modal */
+#homeModal .pentagon,
+#home-div .pentagon{
+    width: 22%;
+    margin-left: 3%;
+    float: left;
+}
+
+#home-div .pentagon{
+  width:18%;
+}
+#homeModal .pentagon img,
+#home-div .pentagon img{
+	width: 100%;
+}
+
+#homeModal .pentagon a,
+#home-div .pentagon a{
+	cursor: pointer;
+	color: #f09523;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+#homeModal .row .pentagon.first,
+#home-div .row .pentagon.first{
+  margin-left: 0%;
+}
+
+#homeModal .row2 .pentagon.first,
+#home-div .row2 .pentagon.first{
+  margin-left: 13%;
+}
+
+#homeModal .row{
+  height: 35vh;
+}
+
+#homeModal .row2{
+  margin-top: 10vh;
+  height: 35vh;
+}
+
+#home-div .row, #home-div .row2{
+  display: flex;
+  justify-content:space-around;
+}
+
+#homeModal,
+#home-div{
+  background: rgba(0,0,0,0.6);
+}
+
+#homeModal .modal-content,
+#home-div .modal-content{
+  background: #000;
+}
+
+#home-div .modal-content{
+  width: 98vw;
+  margin-left: 0.5vw;
+  border: none;
+}
+
+#homeModal .pentagon,
+#home-div .pentagon{
+	cursor: pointer;
+	color: #f09523;
+}
+
+#home-div,
+#BindingModule{
+  height: calc(100% - (5rem + 10vh));
+}
+#home-div .modal-content{
+  height: 100%;
+}
+#home-div .modal-content .container{
+  display:flex;
+  flex-flow:column;
+  align-items: center;
+  height:100%;
+  justify-content:space-around;
+}
+/*END of homeModal css*/
+
+/*preferences Modal css*/
+
+#preferencesModal .row{
+	height: 2.5rem;
+	line-height: 2.5rem;
+	border: 1px solid #ddd;
+}
+
+#preferencesModal .modal-content{
+	width: 90%;
+}
+
+#addCustomerModal .modal-content{
+	width: 40%;
+}
+#preferences-minimums-tab .row .div:nth-child(odd){
+  width: 33%;
+}
+#preferences-minimums-tab .row .div:nth-child(even){
+  width: 32%;
+}
+#preferences-minimums-tab .row .div:nth-child(even) div{
+  width: 22%;
+}
+#preferences-minimums-tab .row .div:nth-child(even) div:first-child{
+  width: 50%;
+}
+#preferences-minimums-tab .row .div:nth-child(3){
+  width: 34%;
+}
+#preferences-minimums-tab .row .div:nth-child(3) div{
+  width: 22%;
+}
+#preferences-minimums-tab .row .div:nth-child(3) div:first-child{
+  width: 49%;
+}
+
+.add_customer_button, .quote_buttons{
+  background: #253545;
+  border: 1px solid #293846;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 0 0.2rem rgba(52,58,64,0.5);
+  border-radius: 5px;
+  padding: 4px;
+  float: right;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 2.5rem;
+}
+.modal-btn{
+  background: #253545;
+  border: 1px solid #293846;
+  color: #fff;
+  font-size: 1rem;
+  box-shadow: 0 0 0 0.2rem rgba(52,58,64,0.5);
+  border-radius: 5px;
+  padding: 0 1rem;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  height: 2.5rem;
+}
+#PDF_Options_Invoice .row{
+  display: flex;
+}
+#Consignee_Details{
+  z-index: 200;
+}
+#PDF_Options_Invoice .modal-content{
+  width:80%;
+}
+#PDF_Options_Invoice .modal-body h4{
+  margin: 0;
+  margin-top: 0.5rem;
+}
+#PDF_Options_Job_Ticket .modal-body h4{
+  margin: 0;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .amount{
+  width:10%;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .quantity{
+  width:10%;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .job_desc{
+  width:60%;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .quantity input{
+  width:95% !important;
+  float: unset;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .amount input{
+  width:95% !important;
+  float: unset;
+}
+#PDF_Options_Invoice .standalone-quotation-table  .job_desc textarea{
+  width:100% !important;
+  float: unset;
+  margin:0;
+}
+#Consignee_Details .modal-content{
+  width: 40%;
+}
+#addCustomerModal .modal-footer{
+  min-height: 5rem;
+}
+
+#addCustomerModal .modal-body{
+  background: #eee;
+}
+
+#addCustomerModal h4{
+  margin: 0px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+#addCustomerModal input{
+  width: 90%;
+  border-radius: 5px;
+  border: 1px solid #cac5c5;
+}
+
+#addCustomerModal textarea{
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #cac5c5;
+  height: 6.5rem;
+}
+
+#AddEditVendor .modal-content{
+  width: 40%;
+}
+
+#AddEditVendor textarea{
+  width: 95%;
+  border-radius: 5px;
+  border: 1px solid #cac5c5;
+  height: 6.5rem;
+}
+
+#customerModal .modal-content{
+  margin: 5% auto;
+}
+
+#customerModal .modal-body{
+  max-height: 67vh;
+  overflow: scroll;
+}
+
+#customerModal .edit{
+  width: 48%;
+}
+
+#preferencesModal .modal-content{
+	background: #ddd;
+  margin-top: 3%;
+}
+
+#changePasswordModal .modal-content{
+	width: 40%;
+}
+
+#changePasswordModal .modal-body .div-2{
+  width: 49%;
+  display: inline-block;
+  float: unset;
+}
+#changePasswordModal .modal-body{
+  background: #ddd;
+}
+
+#changePasswordModal .modal-body label{
+  width: 100%;
+  font-weight: 600;
+}
+#changePasswordModal .modal-body input{
+	width: 80%;
+	margin-right: 5%;
+}
+
+#changePasswordModal .modal-footer button{
+	float: right;
+	line-height: 2rem;
+}
+
+#preferencesModal .preferences_text{
+	width: 42%;
+	font-weight: 600;	
+	padding-left: 10px;
+  text-align: right;
+  padding-right: 0.1rem;
+}
+
+#preferencesModal .preferences_option{
+	width: 22%;
+  margin-right: 1%;
+}	
+
+#preferencesModal .preferences_option select,
+#preferencesModal .preferences_option input{
+    height: 1.5rem;
+    font-weight: 500;
+    outline: none;
+    width: 80%;
+    border: none;
+}
+#libraryModal .preferences_text{
+	width: 42%;
+	font-weight: 600;	
+	padding-left: 10px;
+  text-align: right;
+  padding-right: 0.1rem;
+}
+
+#libraryModal .preferences_option{
+	width: 22%;
+  margin-right: 1%;
+}	
+
+#libraryModal .preferences_option select,
+#libraryModal .preferences_option input{
+    height: 1.5rem;
+    font-weight: 500;
+    outline: none;
+    width: 80%;
+    border: none;
+}
+/*END of prefeerences Modal css*/
+
+/*css for logout div*/
+#logout_div{
+    width: 20%;
+    min-height: 10vh;
+    position:absolute;
+    top: 8vh;
+    right: 1%;
+    z-index:185;
+}
+
+#logout_div .inner-div{
+    background: rgba(0,0,0,0.8);
+    padding-top: 10px;
+    min-height: 30vh;
+}
+/*END css for logout div*/
+
+/*css for pdf div*/
+#pdf_div, #pdf_reports_div{
+    width: 14vw;
+    min-height: 10vh;
+    position:absolute;
+    top: 8vh;
+    right: 14.75%;
+    z-index:300;
+}
+#pdf_div button,#pdf_reports_div button{
+  cursor: pointer;
+}
+#pdf_div .inner-div,#pdf_reports_div .inner-div{
+    background: rgba(0,0,0,0.8);
+    padding-top: 10px;
+}
+/*END css for pdf div*/
+
+/* top row css*/
+.settings_top{
+	background-color: #f09423;
+	width: 32vw;
+	margin: 0.5vw;
+	display: inline-block;
+	border-radius: 5px;
+	padding: 0.75%;
+	font-weight: 600;
+	font-size: 1rem;
+  height: 9.8rem;
+  float: left;
+  margin-top: 0px;
+}
+
+.settings_top .row div, .result_div, .results .row div{
+  float: left;
+}
+
+.settings_top_row{
+	margin-bottom: 0.5vw;
+}
+
+.settings_top input{
+	padding-right: 10px;
+	border-radius: 5px;
+	height: 1.75rem;
+	width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.settings_top select{
+  background: #fff;
+}
+
+.top.button{
+	width: 13.142vw;
+	background-color: #f09423;
+	border-color: #f09423;
+	border-radius: 5px;
+	height: 5.5vh;
+	margin: 0 0.5vw 0.5vw 0.5vw;
+	font-weight: 600;
+	font-size: 1rem;
+	display: inline-block;
+  cursor: pointer;
+}
+
+#home_button{
+	background-color: unset;
+	border: 0px;
+	width: 14.142vw;
+	margin: 0px;
+	background: url("../images/logo.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.top-image{
+	background: #000;
+	border:none;
+	float: left;
+	width: 15.5%;
+}
+
+.top-image img{
+	width: 100%;
+}
+
+#logout_div .top.button{
+	width: 80%;
+	margin-left: 10%;
+	margin-bottom: 10px;
+}
+
+#logout_div .contact, #logout_div .name{
+	width: 100%;
+	display: block;
+	margin-left: 25px;
+	color: #fff;
+	font-weight: 600;
+}
+
+#logout_div .contact{
+	margin-bottom: 15px;
+}
+
+#logout_div .contact{
+	margin-top: 15px;
+}
+
+.quote_no{
+	width: 25%;
+}
+
+#quote_no{
+	width: 100%;
+}
+
+#quote_date{
+	width: 100%;
+}
+
+.quote_no_input{
+	width: 14%;
+}
+
+.date{
+	width: 12%;
+	margin-left: 2%;
+}
+
+.date_input{
+	width: 45%;
+}
+
+.quantity_a,.quantity_b,.quantity_c{
+	width: 8%;
+	margin-right: 0.75rem;
+	display:inline-block;
+  text-align:right;
+}
+
+.quantity_a{
+  float:right !important;
+}
+
+input.quantity{
+	width: 25.5% !important;
+  float: left;
+  margin:0;
+}
+
+.pdf_desc{
+  line-height:1.5rem;
+  width: fit-content;
+  margin-right: 0.5vw;
+}
+
+#pdf_desc{
+	width: 100%;
+	margin-bottom: -1rem;
+  line-height:1.5rem;
+}
+#pdf_desc_div{
+  float:right;
+  position:relative;
+  flex-grow:1;
+}
+
+.min_print_charge{
+	width: 63%;
+}
+
+#min_print_charges, #print_calculation_every{
+	width: 35%;
+	line-height: 1.75rem;
+	height: 1.75rem;
+	border: none;
+	border-radius: 5px;
+}
+
+/*END top row css */
+
+/*bottom row css*/
+.bottom-row button{
+	background-color: #799a27;
+	border-color: #799a27;
+	border-radius: 5px;
+	height: 100%;
+	font-weight: 600;
+	font-size: 1rem;
+  margin: 0 0.5vw 0.5vw 0.5vw;
+}
+
+.bottom-row{
+	height: 5.5vh;
+  position: fixed;
+  bottom: 0.5vh;
+  padding-right: 1vw;
+}
+/*END bottom row css */
+
+/*middle container css*/
+.middle_container{
+	flex-grow: 1;
+	width: 98vw;
+	margin-left: 0.5vw;
+	background-color: var(--background);
+	border-radius: 5px;
+}
+
+.middle-row{
+	display: flex;
+	flex-direction: column;
+  flex-grow:1;
+  margin-bottom:0.5vw;
+  max-height: calc( 100vh - ( 11.5vh + 10rem + 2vw ) );
+}
+
+.pdf_desc_div{
+  display: flex;
+}
+
+/*table css*/
+th, td{
+	background-color: #fff;
+	border-right: 2px solid #ddd;
+	vertical-align: top;
+	display: block;
+	float: left;
+	padding: 0px;
+}
+
+th{
+	color: rgba(135,127,127,0.73);
+	font-weight: 600;
+	font-size: 0.84rem;
+	line-height: 1.1rem;
+	height: 5.7rem;
+	padding-top: 2px;
+}
+
+td{
+	height: 2rem;
+	line-height: 2rem;
+	padding: 0px;
+}
+
+td select{
+	appearance: none;
+	height: 100%;
+	background: #fff;
+	border: none;
+	outline: none;
+	width: 100%;
+	font-weight: 600;
+	font-size: 1rem;
+	padding-left: 3px;
+}
+
+td select:active, td select:focus{
+	border: none;
+	outline: none;
+}
+/*END table css*/
+
+/*css for inputs table*/
+.inputs{
+	width: 100%;
+	overflow: scroll;
+	height: 100%;
+  flex-grow:1;
+  display:flex !important;
+  flex-flow:column;
+}
+
+/* table widths*/
+#calendar_input{
+	width: max-content;
+}
+
+#single_sheet_input{
+	width: max-content;
+}
+
+#book_work_input{
+	width: max-content;
+}
+
+#multi_sheet_input{
+	width: max-content;
+}
+
+#stationery_input{
+	width: max-content;
+}
+
+#box_input_table{
+	width: max-content;
+}
+/*END table widths*/
+/*END css for input table*/
+
+/*css for results*/
+.results{
+	font-size: 1rem;
+	font-weight: 600;
+	color: rgb(33,47,41);
+}
+
+.results.row .result_div:last-child{
+	margin-right: 0px;
+}
+
+.result_div{
+	margin: 0.5vw;
+  width: 32.35%;
+  margin-bottom:0;
+}
+
+.result_div .row:nth-child(odd){
+	background-color: #799a27;
+}
+
+.result_div .row:nth-child(even){
+	background-color: #87ab31;
+}
+/*END css for results*/
+
+.paper_size .width, .paper_size .height{
+	width:50%;
+	float:left;
+	display:block;
+}
+.paper_size .width{
+	border-right:2px solid #ddd;
+}
+.option{
+	width:4rem;
+	text-align:center;
+	font-weight:600;
+}
+.paper{
+	width:30rem;
+}
+.paper_size{
+	width:10.5rem;
+  display: none;
+}
+.paper_gsm{
+	width:5rem;
+  display: none;
+}
+.paper_cost{
+	width:9rem;
+}
+.wastage{
+	width:5rem;
+}
+.finish_size_format, .pages_in_plate_sig{
+	width:4.5rem;
+}
+.print_sides{
+	width:6rem;
+}
+.total_pgs{
+	width:6rem;
+}
+.dtp{
+	width:9.5rem;
+}
+.pages_in_plate_sig{
+	width:5rem;
+}
+.num_colors{
+	width:5.6rem;
+}
+.plate_cost{
+	width:4.3rem;
+}
+.min_print_rate{
+	width:5.5rem;
+}
+.balance_qty{
+	width:6.3rem;
+}
+.hidden_expense{
+	width:8.5rem;
+}
+#box_input_table .p_f{
+  width:4.3rem;
+}
+.hidden_expense select, .hidden_expense input{
+  width: 50%;
+  float:left;
+}
+.hidden_expense input{
+  border-left: 2px solid #ddd;
+}
+.profit{
+	width:9.3rem;
+}
+.ups_in_plate{
+	width:5.5rem;
+}
+.lami_uv{
+	width:26rem;
+}
+.folding{
+	width:26.5rem;
+}
+.staple{
+	width:5.5rem;
+}
+.staple input.disabled{
+  width:100%;
+}
+.staple-multi{
+	width:7rem;
+}
+.staple-multi input{
+	width:45%;
+  float: left;
+  border-left: 2px solid #ccc;
+}
+.staple-multi select{
+	width:55%;
+  float: left;
+}
+.hidden_expense input.disabled{
+  width:50%;
+}
+.spot-uv{
+	width:14rem;
+}
+.punch_die{
+	width:12rem;
+}
+.binding{
+	width:5.5rem;
+}
+.paper_desc{
+	width:26rem;
+}
+.wastage{
+	width:7.5rem;
+}
+.copies_set{
+	width:4rem;
+}
+.sets_book{
+	width:4rem;
+}
+.finish_cut_format{
+	width:4.5rem;
+}
+.ups_in_plate{
+	width:5rem;
+}
+.plate_master{
+	width:5rem;
+}
+.num_colours{
+	width:4rem;
+}
+.plate_master_cost_each{
+	width:4rem;
+}
+.print_rate{
+	width:4rem;
+}
+.binding_type{
+	width:15rem;
+}
+.numbing{
+	width:8rem;
+}
+.numbing select{
+  width:50%;
+  float:left;
+}
+.numbing input{
+	width:50%;
+  border-left: 2px solid #ddd;
+}
+#inputsModal .numbing input{
+  width: 100%;
+}
+.numbing input.disabled{
+  float:left;
+}
+.met_uv,.coating{
+	width:17.5rem;
+}
+.sheets_in_calendar{
+	width:4rem;
+}
+.num_colors_front{
+	width:5rem;
+}
+.months_in_plat{
+	width:5rem;
+}
+.num_colors_back{
+	width:5rem;
+}
+.plate_cost_per_plate{
+	width:4.3rem;
+}
+.bal_print_rate{
+	width:5rem;
+}
+.tinning{
+	width:4.5rem;
+}
+.over_print_qty{
+	width:4.5rem;
+}
+.over_print_colors{
+	width:5rem;
+}
+.over_print_dtp{
+	width:9.5rem;
+}
+.title{
+	width:41%;
+	padding-left:5px;
+  overflow: visible;
+  white-space: nowrap;
+}
+.result_div:nth-child(2) .title{
+  width:50%;
+}
+.result_div .row{
+	padding-top:4px;
+	padding-bottom:4px;
+  min-height: 1.7rem;
+}
+.results .result_div:last-child{
+	margin-right: 0px;
+}
+.result_div .row:first-child{
+	padding-top:5px;
+	border-radius: 5px 5px 0px 0px;
+  min-height: 1.7rem;
+}
+.result_div .row:last-child{
+	padding:5px 0px;
+	border-radius: 0px 0px 5px 5px;
+}
+.single_sheet.middle_container{
+	height:39vh;
+}
+.multi_sheet.middle_container{
+	height:33vh;
+}
+.stationery.middle_container{
+	height:36vh;
+}
+.res-1, .res-2, .res-3{
+	width:19%;
+  text-align:end;
+}
+.result_div:nth-child(2) .res-1, .result_div:nth-child(2) .res-2, .result_div:nth-child(2) .res-3{
+  width:16%;
+}
+.paper_cost select, .profit select,	.dtp select, .spot-uv select, 
+	.over_print_dtp select, .blanket select
+	{
+	width:50%;
+	float:left;
+}
+.paper_cost input, .profit input, .dtp input, .spot-uv input,
+	.over_print_dtp input, .blanket input
+	{
+	width:50%;
+	float:left;
+	border-left:2px solid #ddd;
+}
+.profit input.disabled{
+	width: 50%;
+}
+.spot-uv input.disabled{
+	width: 50%;
+}
+.punch_die select{
+	width:53%;
+	float:left;
+}
+.punch_die input{
+	width:47%;
+	float:left;
+	border-left:2px solid #ddd;
+}
+.punch_die input.disabled:first-child{
+	width:53%;
+}
+.punch_die input.disabled:nth-child(2){
+	width:47%;
+}
+.punch_die_cost{
+  width:6rem;
+}
+.sorting{
+  width:6rem;
+}
+.pasting{
+  width:6rem;
+}
+.blanket{
+  width:14rem;
+}
+.folding span, .lami_uv span, .met_uv span,.coating span{
+	display:block;
+	width:25%;
+	float:left;
+}
+#box_input_table .met_uv span, #box_input_table .coating span{
+	display:block;
+	width:33%;
+	float:left;
+}
+.folding select, .folding input, .lami_uv select, .lami_uv input{
+	width:25%;
+	float:left;
+	border-left:2px solid #ddd;
+}
+.lami_uv input.disabled, .folding input.disabled{
+	width:25%;
+	float:left;
+	border-left:2px solid #ddd;
+}
+.met_uv select, .met_uv input, .coating select, .coating input{
+	width:32%;
+	float:left;
+	border-left:2px solid #ddd;
+}
+.paper_desc .selectPaper, .binding_type select{
+	width:75%;
+	float:left;
+}
+.paper_desc input, .binding_type input{
+	width:25%;
+	border-left:2px solid #ddd;
+	float:left;
+}
+.folding_item, .met_uv_item{
+	border-left:none !important;
+}
+hr{
+	margin-bottom:0px;
+	margin-top:4px;
+}
+td select:nth-child(2):active{
+	border-left:2px solid #ddd;
+}
+td select:nth-child(2){
+	border-left:2px solid #ddd;
+}
+.plus{
+	font-weight:600 !important;
+	color:#2a8c09;
+	margin-top:5px;
+}
+.minus{
+	font-weight:400 !important;
+	color:#ed0202;
+	margin-top:5px;
+	font-size:3.5rem;
+  display: block;
+}
+#add_row{
+		color: green;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    background: #fff;
+    appearance: none;
+    width: 100%;
+    padding-left: 0;
+		height: 2rem;
+		display: block;
+}
+#add_row option{
+	font-size:0.7rem;
+	color:#000;
+}
+#add_row option:first-child{
+	display:none;
+}
+.hide{
+	display:none !important;
+}
+.disabled{
+	background-color: #ddd;
+  border-left: 2px solid #fff !important;
+  line-height: 1.7rem;
+}
+.disabled:last-child{
+  border-right: 2px solid #fff;
+}
+.js-disabled{
+	text-align: center;
+	font-weight: 600;
+	font-size: 1.2rem;
+	color: red;
+}
+.dtp .js-disabled, .profit .js-disabled{
+	width:45%;
+}
+.binding_type .js-disabled:first-child{
+	width:74%;
+}
+.binding_type .disabled:first-child{
+	width:74%;
+}
+select.js-disabled{
+	padding-left:10%;
+}
+.input_table select option:first-child{
+	display:none;
+}
+.input_table .hidden_expense select option:first-child{
+  display:block;
+}
+.calendar .title{
+	width:38%
+}
+.calendar .res1{
+	width:29%
+}
+.calendar .res-2{
+	width:29%
+}
+.remove-row{
+	width:100%;
+	margin-top:-0.1rem;
+}
+.row_num{
+	width:100%;
+}
+.remove-row{
+	font-weight:400 !important;
+	color:#ed0202;
+}
+/*end middle container css*/
+#paperModal .modal-content{
+	width:50%;
+}
+#stationeryPaperModal .modal-content{
+	width:50%;
+}
+.modal-body{
+	padding: 15px;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+.paper_num{
+	width: 5%;
+	float: left;
+	border-right: 1px solid #ddd;
+	text-align: center;
+}
+.paper_name{
+	width: 75%;
+	float: left;
+	border-right: 1px solid #ddd;
+	padding-left: 20px;
+	font-weight: 500;
+}
+#stationeryPaperModal .paper_name{
+	width: 60%;
+}
+.paper_edit{
+	width: 15%;
+	float: left;
+}
+.paper_row{
+	height: 2rem;
+	line-height: 2rem;
+	border: 1px solid #ddd;
+}
+.paper_edit span{
+	width: 50%;
+	display: block;
+	float: left;
+	text-align: center;
+}
+#paperModal .footer div{
+	width: 25%;
+	font-weight: 600;
+	float: left;
+	text-align: center;
+}
+#paperModal .footer input{
+	width: 50%;
+	float: left;
+	text-align: center;
+}
+#paperModal .footer button{
+	margin-left: 10%;
+	width: 10%;
+	height: 2.5rem;
+}
+#stationeryPaperModal .footer div{
+	width: 15%;
+	font-weight: 600;
+	float: left;
+	text-align: center;
+}
+#stationeryPaperModal .footer input{
+	width: 45%;
+	float: left;
+	text-align: center;
+}
+#stationeryPaperModal .footer .add_paper_cost{
+	width: 11%;
+	margin-left: 5%;
+}
+#stationeryPaperModal .footer button{
+	margin-left: 10%;
+	width: 10%;
+	height: 2.5rem;
+}
+.material-icons{
+	cursor: pointer;
+}
+.modal-body .paper_cost{
+	width: 15%;
+	float: left;
+	text-align: center;
+	border-right: 1px solid #ddd;
+}
+.save_preferences_button{
+  float: right;
+}
+.screen_default{
+  background-color: hsla(65,97%,70%,1);
+  /*background-color: hsla(223,56%,0%,1);*/
+  line-height: 1.85rem;
+}
+
+#tooltip{
+  position: absolute;
+  width: 200px;
+  transform: translate(0,-100%);
+  border: 1px solid #000;
+  padding: 10px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  z-index: 100;
+}
+
+#tooltip::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12.5px 0 12.5px;
+  border-color: #afafaf transparent transparent transparent;
+  position: absolute;
+  left: 40%;
+  bottom: -12px;
+}
+
+#tooltip.left-tooltip::after{
+  left: 2rem;
+}
+
+.w-50{
+  width: 50%;
+}
+.w-100{
+  width: 100%;
+}
+.float-left{
+  float: left;
+}
+.margin-0{
+  margin: 0px;
+}
+.customer_table{
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+.table{
+  display: table !important;
+}
+.table_header{
+  display: table-row !important;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid #959595;
+}
+.table_row{
+  display: table-row !important;
+}
+.table_row div, .table_header div{
+  display: table-cell !important;
+  border: 1px solid #959595;
+  padding-left: 0.3rem;
+}
+.table_row div.hide, .table_header div.hide{
+  display:none;
+}
+.customer_table .num{
+  width: 2.5%;
+}
+#customer{
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+#customer:disabled{
+	background-color: rgb(221,221,221);
+}
+#quotationModal{
+  height: 100vh;
+}
+#quotationModal .modal-content{
+  margin: 1vh auto;
+  width: 95%;
+  height: 98vh;
+}
+#quotationModal .modal-footer{
+  height: 10vh;
+  padding-top: 13px;
+}
+#quotationModal .modal-body{
+  height: 78vh;
+}
+#quotationModal .modal-header{
+  height: 10vh;
+}
+#quotationLibraryModal{
+  height: 100vh;
+}
+#quotationLibraryModal .modal-content{
+  margin: 1vh auto;
+  width: 95%;
+  height: 98vh;
+}
+#quotationLibraryModal .modal-footer{
+  height: 10vh;
+  padding-top: 13px;
+}
+#quotationLibraryModal .modal-body{
+  height: 78vh;
+  overflow-y: scroll;
+}
+#quotationLibraryModal .modal-header{
+  height: 10vh;
+}
+.quote_buttons{
+  margin-right: 0.5%;
+  margin-left: 0.5%;
+  width: 15.6%;
+}
+.quote_args{
+  width: 32%;
+  float: left;
+  font-size: 1.5rem;
+}
+.quote_args select{
+  height: 2rem;
+}
+#quote_customer{
+  width: 18rem;
+}
+#quote_module{
+  width: 10rem;
+}
+#quote_month, #quote_year{
+  width: 6rem;
+}
+#quote_body, #quote_library_body{
+  display: table;
+  border-collapse: collapse;
+}
+.quote_lock{
+  width: 3vw;
+  color: red;
+}
+.quote_number{
+  width: 7vw;
+}
+.quote_customer{
+  width: 15vw;
+  max-width: 15vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quote_module{
+  width: 10vw;
+}
+.quote_job_ref{
+  width: 15vw;
+  max-width: 15vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quote_date{
+  width: 10vw;
+}
+.quote_desc{
+  width: 32vw;
+  max-width: 32vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#quotationLibraryModal .quote_desc{
+  width: 50vw;
+  max-width: 50vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quote_library_highlight{
+  background-color: #f09423 !important;
+}
+.sel_wastage{
+  width: 53%;
+  float: left;
+}
+.inp_wastage{
+  width: 47%;
+  border-left: 2px solid #ddd;
+}
+#copies_set{
+  background-color: #fcc107;
+}
+.book_binding_type{
+  width:55%;
+}
+.book_size{
+  width:55%;
+}
+.book_size, .book_manual, .book_perfect, .book_case{
+  padding-top: 0.5rem;
+  display: block;
+  float: left;
+}
+.book_binding_type select, .book_binding_type input{
+  padding-top:0px;
+}
+.book_manual, .book_perfect, .book_case{
+  width: 15%;
+}
+#binding_table{
+  width: 100%;
+  border: 2px solid #ddd;
+}
+.bind_total_pgs, .bind_sheet_sig, .bind_folding, .bind_collating, 
+.bind_stapling,.bind_sewing{
+  width: 6%
+}
+.bind_total_pgs input, .bind_sheet_sig input, .bind_folding input, 
+.bind_collating input, .bind_stapling input, .bind_sewing input{
+  width: 100%
+}
+#binding_table th{
+  border-bottom: 2px solid #ddd;
+}
+#binding_table .profit{
+  width:9%;
+}
+input.book_manual, input.book_perfect, .book_size{
+  border-right: 2px solid #ddd;
+}
+#BindingModal .div-3,
+#BindingModule .div-3{
+  margin: 0.5%;
+  width: 32.1%;
+  display: inline-block;
+  float: unset;
+}
+#BindingModal .div-3 .title-res,
+#BindingModule .div-3 .title-res{
+  width: 68%;
+  padding-left: 1.5%;
+  padding-top: 1px;
+  display: inline-block !important;
+  float: unset !important;
+}
+#BindingModal .results,
+#BindingModule .results{
+  min-height: 5.5rem;
+}
+#BindingModal .result_div .row,
+#BindingModule .result_div .row{
+  min-height: 1.4rem;
+}
+#BindingModal .modal-content{
+  margin: auto;
+  width:98%;
+}
+#BindingModal.modal .modal-content{
+  margin: auto;
+  width:95%;
+}
+#book_binding{
+  color:green;
+  font-size:2rem;
+  cursor: pointer;
+}
+.input_table input,.input_table select{
+  text-align: center;
+}
+.input_table hr, .binding_table hr{
+  border: 1px solid #ddd;
+}
+.input_table{
+  z-index:100;
+}
+.binding_type select{
+  text-align: left;
+}
+#homeModal .modal-content{
+  padding: 2%;
+  width: 70%;
+  height: 90%;
+}
+
+#quote_body .row:nth-child(odd), #quote_body .row:nth-child(odd){
+	background-color: #fff;
+}
+
+#quote_body .row:nth-child(even), #quote_library_body .row:nth-child(even){
+	background-color: #d2deb4;
+}
+.quote_highlight{
+  background-color: #f09423 !important;
+}
+#quote_body .row, #quote_library_body .row{
+  line-height: 2rem;
+}
+.pagination{
+  width:100%;
+}
+.page{
+  font-size:2rem;
+  padding: 5px;
+  float:left;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  color: blue;
+  cursor: pointer;
+}
+#BindingModal .quote_buttons,
+#BindingModule .quote_buttons{
+  width: 20%;
+  float: right;
+}
+#BindingModal .modal-footer,
+#BindingModule .modal-footer{
+  height: 5rem;
+}
+#preferencesModal .modal-body .row div{
+  display: inline-block;
+}
+#preferences-minimums-tab .row div{
+  display: inline-block;
+}
+.input_table input, .input_table select{
+  line-height: 1.85rem;
+}
+select, input, textarea{
+  font-weight:600;
+  font-size: 1rem;
+}
+.tab-container{
+  width: 100%;
+  font-size: 1.5rem;
+}
+.tab{
+  border: 1px solid #000;
+  max-width: fit-content;
+  padding: 2px 10px;
+  border-radius: 10px 10px 0px 0px;
+  background: hsl(33, 87%, 70%);
+  display: inline-block;
+  cursor: pointer;
+  border-bottom: none;
+}
+.tab.active{
+  background: #4d2604;
+  color: #fff;
+  font-weight:600;
+}
+.tab-body{
+  border: 1px solid #000;
+  padding: 10px 0px;
+}
+.paper_desc_sel, .paper_sel, .sel_paper, #job_ref{
+  text-align: start !important;
+}
+
+.calendar.quantity_a{
+  width: 63%;
+}
+.calendar.quantity{
+  width: 35% !important;
+  margin: 0px;
+}
+#preferences-minimums-tab .row:first-child{
+  font-weight: 600;
+  font-size: 0.84rem;
+  line-height: 1.1rem;
+  height: 4rem;
+}
+#preferences-minimums-tab .preferences_option{
+  text-align: center;
+}
+.input_table .process{
+  width: 6rem;
+}
+.process_cost_value{
+  width: 80%;
+  float: left;
+}
+#inputsModal .modal-body{
+  display: block; 
+  background: rgb(221,221,221);
+  font-weight: 600;
+}
+#inputsModal .modal-body .row{
+  display: table-row
+}
+#inputsModal .modal-body .row div{
+  display: table-cell;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+#inputsModal{
+  display: flex;
+}
+#inputsModal .modal-content{
+  margin : auto;
+  width : max-content;
+}
+#inputsModal .modal-body .select{
+  width: 2rem !important;
+}
+#inputsModal .modal-body .process{
+}
+#inputsModal .modal-body .rate_per select{
+  width: 100%;
+  line-height: 1.3rem;
+  height: 1.3rem;
+  background: #fff;
+  border: none;
+}
+#inputsModal .modal-body .select input{
+  width: 100%;
+}
+#inputsModal .modal-body .rate{
+  width: 5rem;
+  line-height: 1.8rem;
+  text-align: center;
+}
+#inputsModal .modal-body .rate_per{
+  width: 9rem;
+  text-align: center;
+}
+#inputsModal .modal-body input{
+  line-height: 1.2rem;
+  background: #fff;
+}
+#inputsModal .modal-body .amount{
+  width: 25rem;
+  text-align: center;
+}
+#inputsModal .modal-body .amount input,#inputsModal .modal-body .amount span{
+  display: inline-block;
+  width: 32%;
+  text-align: center;
+}
+#inputsModal .modal-body .pgs_to_process{
+  width: 5rem;
+}
+#inputsModal.book-multi .modal-body .pgs_to_process{
+  width: 12.5rem;
+  text-align: center;
+}
+#inputsModal.book-multi .modal-body .pgs_in_sheet{
+  text-align: center;
+}
+#inputsModal.book-multi .modal-body .pgs_to_process input{
+  width: 50%;
+}
+#inputsModal.book-multi .modal-body .pgs_in_sheet input{
+  width: 50%;
+}
+#inputsModal .modal-body input{
+  text-align: center;
+}
+.add-row-arrow{
+  vertical-align: top;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#add-row-dropdown{
+  position: absolute;
+  width: 200px;
+  transform: translate(0,-100%);
+  border: 1px solid #000;
+  padding: 10px;
+  background: rgba(0,0,0,0.85);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  z-index:150;
+}
+#add-row-dropdown input{
+  width: 35px;
+}
+.bind-res{
+  width: 29%;
+  text-align: right;
+  display: inline-block !important;
+  float: unset !important;
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+.row.bind{
+  cursor: pointer;
+}
+.row.bind:hover{
+  background-color: #f09423;
+}
+#add-row-dropdown .fa-play{
+  margin-right: 0.5rem;
+}
+#add-row-dropdown .checkbox{
+  cursor: pointer;
+  padding: 0.5rem 0px;
+}
+#add-row-dropdown .checkbox:hover{
+  background: rgba(0,0,0,0.8);
+}
+#inputsModal .modal-body .direct-cost{
+  display: block;
+}
+#inputsModal .direct-cost .process{
+  width: fit-content;
+}
+#inputsModal .direct-cost .rate{
+  width: 7rem;
+}
+#inputsModal .modal-body .direct-cost .div{
+  padding: 0px;
+}
+#inputsModal .modal-body .rate.single_box{
+  width: 13.1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#inputsModal .modal-body .rate_per.single_box{
+  width: 14rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.title-res.title{
+  text-align:left;
+  font-size:1.2rem;
+}
+#BindingModal .result_div .title-row{
+  color:#fff;
+  font-size:1.2rem;
+  font-size:700;
+}
+#bookBinding{
+  width: 100%;
+  font-weight: 600;
+  background: #ccc;
+}
+#bookBinding .modal-body{
+  display: table;
+}
+#bookBinding .row{
+  display: table-row;
+  height: 2.1rem;
+}
+#bookBinding .row .book-size{
+  width: 40%;
+  padding-left: 0.5rem;
+}
+#bookBinding .row input{
+  width: 80%;
+}
+#bookBinding .row div{
+  display: table-cell;
+}
+#bookBinding .manual,
+  #bookBinding .perfect, 
+  #bookBinding .hard,
+  #bookBinding input{
+  text-align: center;
+} 
+#stationeryBinding{
+  display: table;
+  width: 100%;
+  font-weight: 600;
+  background: #ccc;
+}
+#stationeryBinding .row{
+  display: table-row;
+  height: 2.1rem;
+}
+#stationeryBinding .row .size_format{
+  width: 20%;
+  text-align:center
+}
+#stationeryBinding .row input{
+  width: 80%;
+}
+#stationeryBinding .row div{
+  display: table-cell;
+}
+#stationeryBinding .Pad_Bound,
+  #stationeryBinding .Top_Cover_Paper, 
+  #stationeryBinding .Hard_Bound,
+  #stationeryBinding .Cloth_Bound,
+  #stationeryBinding input{
+  text-align: center;
+} 
+#libraryModal .modal-content{
+  margin: 2% auto;
+}
+#paperRequirementModal .modal-content{
+  width: 85%;
+  font-weight:600;
+  text-align: center;
+  padding: 1rem;
+  background-color: #4c4c4c;
+}
+#paperRequirementModal .option_wstg_gain{
+  text-align: right;
+  text-transform: uppercase;
+}
+#paperRequirementModal .modal-body{
+  text-align:right;
+}
+#paperRequirementModal .modal-body{
+  display: table;
+  width: 100%;
+  padding: 0px;
+}
+#paperRequirementModal .modal-body .header_row,
+#paperRequirementModal .modal-body .data_row{
+  display: table-row;
+}
+#paperRequirementModal .modal-body .header_row div,
+#paperRequirementModal .modal-body .data_row div{
+  display: table-cell;
+  width: max-content;
+}
+#paperRequirementModal .modal-body .header_row .option,
+#paperRequirementModal .modal-body .data_row .option{
+  text-align: left;
+}
+#paperRequirementModal .modal-body .header_row .qty_c,
+#paperRequirementModal .modal-body .data_row .qty_c{
+  padding-right: 0.5rem;
+}
+#paperRequirementModal .modal-body .data_row div{
+  padding: 0.25rem 0.5rem;
+}
+#paperRequirementModal .modal-body .header_row{
+  background-color: #6c8726;
+  color: #fff;
+  font-weight: 600;
+}
+#paperRequirementModal .modal-body .header_row div{
+  padding: 0.25rem 0.5rem;
+}
+#paperRequirementModal .modal-body .sheets{
+  background-color: #8db12d;
+}
+#paperRequirementModal .modal-body .kgs{
+  background-color: #7b9c27;
+}
+#paperRequirementModal .modal-body .cost{
+  background-color: #6c8726;
+}
+#paperRequirementModal .modal-body .wstg_gain{
+  background-color: #566b1e;
+}
+#paperRequirementModal .modal-body .header_row .row,
+#paperRequirementModal .modal-body .data_row .row{
+  display: table-row;
+}
+#paperRequirementModal .modal-body .header_row .row div,
+#paperRequirementModal .modal-body .data_row .row div{
+  display: table-cell;
+}
+#paperRequirementModal .modal-body .header_row .row .option,
+#paperRequirementModal .modal-body .data_row .row .option{
+  display: table-cell;
+  width: max-content;
+  text-align: left;
+}
+#paperRequirementModal hr{
+  border-color: #fff;
+}
+.grey-back{
+  background: #cacaca;
+}
+#paper_req_sample{
+  display: none;
+}
+.paper-wstg{
+  cursor: pointer;
+}
+#printRunLength , #printRunLengthChange{
+  display: flex;
+}
+#printRunLength .modal-content, #printRunLengthChange .modal-content{
+  width: 70%;
+  font-weight: 400;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: auto;
+}
+.float-right{
+  float:right;
+}
+#duplicatePostProcess .modal-content{
+  width: 30%;
+  text-align: center;
+}
+
+.animate-pgs_to_process{
+  animation-name: pgs_to_process;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.animate-pgs_to_process_title{
+  animation-name: pgs_to_process_title;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+.animate-bg{
+  animation-name: animate-bg;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#changePostProcess{
+  z-index: 1000;
+}
+
+#changePostProcess .modal-content{
+  width: 50%;
+}
+#changePostProcess .modal-body{
+  text-align: center;
+  font-weight: 600;
+}
+
+.text-red{
+  color: red;
+}
+
+#pdf-text-tab{
+  font-weight: 600;
+}
+
+#pdf-text-tab .row{
+  height: 8rem;
+}
+
+.pdf_text:first-child{
+  width: 30%;
+  text-align:right;
+}
+.pdf_text:nth-child(2){
+  width: 68%;
+  text-align:left;
+}
+#PDF_Options .modal-content{
+  width: 30%;
+}
+#PDF_Options .modal-body{
+  text-align:center;
+}
+#PDF_Options .modal-body .row{
+  margin-bottom: 0.5rem;
+}
+#PDF_Options_Delivery .modal-content{
+  width: 65%;
+}
+#PDF_Options_Delivery .modal-body .row{
+  display: flex;
+}
+#PDF_Options_Job_Ticket .modal-body .row{
+  display: flex;
+}
+.pdf_text textarea{
+  width:100%;
+  height: 7rem;
+}
+#PDF_Options_Job_Ticket textarea{
+  width:100%;
+  height: 7rem;
+}
+.pdf_qty_row input{
+  display: inline-block;
+  width: unset;
+}
+
+.pdf_qty{
+  display: inline-block !important;
+}
+.quote_type{
+  display: inline-block !important;
+  width:unset;
+}
+#quote_library_body .quote_number{
+  width: 5%;
+}
+#quote_library_body .quote_module{
+  width: 13%;
+}
+#quote_library_body .quote_job_ref{
+  width: 30%;
+}
+#quote_library_body .quote_desc{
+}
+#change_print_run{
+  width: 4.5rem;
+  display: inline;
+  background: none;
+  color: #fff;
+  border-bottom: 2px dashed #ccc;
+  padding: 0px 0.5rem;
+  margin: 0px 0.5rem;
+}
+.change_print_run{
+  padding: 0.5rem;
+  height: unset;
+}
+.settings_top_row{
+  height: 10rem;
+}
+#screenshot{
+  position: absolute;
+  top: 100%;
+  text-align: center;
+}
+
+#inputs_rows .inp_ups_in_plate{
+  background-color: hsla(65,97%,70%,1) !important
+}
+
+#temp_desc_pdf{
+  position: absolute;
+  width: 100%;
+  padding-left: 2%;
+  top: 0%;
+  line-height: 1.2rem;
+  height: 8.5rem;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+#paper_table{
+  max-height: 75vh;
+  overflow: scroll;
+}
+
+#paper_table .new_type, #paper_table .new_brand{
+  width : 8em;
+}
+.selectPaper{
+  text-align: left !important;
+}
+
+#editProfile .modal-content{
+  width: 50%;
+}
+
+#editProfile .modal-content input{
+  text-align:left;
+  width: 98%;
+}
+
+#editProfile button{
+  width: auto;
+}
+#editProfile .plan{
+  opacity: 1;
+  background: #fff;
+  color: #000;
+}
+
+.form-row{
+  display: flex !important;
+}
+
+#alertModal{
+  text-align: center;
+  z-index: 2500;
+}
+#alertModal button{
+  width: max-content;
+}
+
+.guides-guide span{
+  max-width: 50%;
+  text-align: justify;
+  font-size: 1.5rem;
+}
+
+#alertModal .hand_stop{
+  max-width: 5rem;
+  width: 5rem;
+  margin: auto;
+}
+
+.data_list{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  z-index: 1000;
+  background: #fff;
+  position: absolute;
+}
+
+.data_list li{
+  padding: 0px 1rem;
+  margin: 0px;
+  line-height: 2rem;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+#lib_customer{
+  border: 1px solid #959595;
+  width: 95%;
+  padding: 0.25rem 0px;
+}
+
+.text-center{
+  text-align:center;
+}
+
+.binding-info{
+  color: #fff;
+  background: #000;
+}
+
+.input-locked{
+  background: hsl(0deg 0% 95%) !important;
+  opacity: 1;
+  color: #000;
+}
+
+.process_cost{
+  color: green;
+  font-size: 1.7rem;
+  cursor: pointer;
+  padding: 0px;
+  background: #fff !important;
+}
+
+#quote_locked{
+}
+
+.danger{
+  color: red;
+  font-weight: 600;
+}
+#loadingModal{
+  z-index : 10000;
+}
+#loadingModal .modal-content{
+  background-color: unset; 
+  border: unset; 
+  width: unset; 
+}
+.loader {
+  width: 10rem;
+  height: 10rem;
+  display: inline-block;
+  position: relative;
+  border-width: 14px 14px 14px 14px;
+  border-style: solid dotted solid dotted;
+  border-color: #de3500 rgba(255, 255, 255,0.3) #fff rgba(151, 107, 93, 0.3);
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: 2s rotate linear infinite;
+ }
+ .loader:before , .loader:after{
+  content: '';
+  top: 0;
+  left: 0;
+  position: absolute;
+  border: 25px solid transparent;
+  border-bottom-color: #fff;
+  transform: translate(-28px, 67px) rotate(-44deg);
+  }
+ .loader:after {
+  border-color: #de3500 #0000 #0000 #0000;
+  transform: translate(102px, 5px) rotate(-47deg);
+  }
+  
+.job_size{
+  float:left;
+}
+.cuts_preview{
+  /*
+  width: 30%;
+  height : 100%;
+  float: right;
+  position:relative;
+  */
+  width: 100%;
+  text-align:center;
+  font-size: 2rem;
+}
+.book .cuts_preview{
+  /*width:25%;*/
+}
+#cuts_preview .job_size_cuts{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-top: 50%;
+  transform: translate(0,-50%);
+}
+#cuts_preview svg, .job_size_svg svg{
+  width : 100%;
+  height : 100%;
+}
+.job_size_svg{
+  background: #fff;
+  margin-bottom:1rem;
+  height:95%;
+}
+.job_size_container{
+  padding: 0.5vw;
+  border: 1px solid #000;
+}
+#jobSizeModal .modal-body{
+  display : flex;
+  max-height : 86vh;
+  height : 86vh;
+  background: #fff;
+  justify-content: space-around;
+}
+#jobSizeModal .modal-footer{
+  height: 5rem;
+}
+#jobSizeModal .header .left-text{
+  float: left;
+}
+#jobSizeModal .header .center-text{
+  text-align: center;
+  font-size: 1.5rem;
+  width: 70%;
+  padding-top: 1rem;
+  float:left;
+}
+.job-size .div-4{
+}
+.job_size{
+  isolation: isolate;
+}
+.job_size:first-child{
+  width:60%;
+} 
+.job_size:nth-child(2){
+  width:40%;
+} 
+.job_size_cuts{
+  font-weight: 600;
+  justify-content: center;
+  margin-left: 1rem;
+}
+.job_size_cuts div{
+  display:inline;
+}
+.job_size_label{
+  width: 60%;
+  height: 1.75rem;
+  line-height: 1.75rem;
+}
+.book .job_size_label{
+}
+.job_size_inputs{
+  display:flex !important;
+  position: relative;
+  width: 40%;
+  margin: 0;
+}
+.book .job_size_inputs{
+}
+.job_size_book .job_size_label{
+  width: 64%;
+  padding-left: 4%;
+}
+#customColorRateModal .modal-content{
+  width:40%;
+  text-align: center;
+}
+#color_rate_1000_base{
+  margin-bottom:15px;
+}
+.inp_plate_cost:disabled, .inp_min_print_rate:disabled{
+  background-color: #fcc107 !important;
+  color: #000;
+}
+
+.calc_base{
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.job_size_inputs input{
+  width: 100%;
+  padding:0px;
+  border-radius:0;
+  background-color:transparent;
+  z-index:2;
+}
+.job_size_inputs input:nth-child(2){
+  text-align:right;
+  padding-right:0.4rem;
+}
+.job_size_inputs input:nth-child(3){
+  text-align:left;
+  padding-left:0.4rem;
+}
+.middle-x{
+  position: absolute;
+  width: 96%;
+  text-align: center;
+  height: 1.75rem;
+  line-height: 1.75rem;
+  background: #fff;
+  z-index: 1;
+  margin-left: 2%;
+  border-radius: 4px;
+}
+.job_size_inputs_cm{
+  font-size:0.8rem;
+  height:2rem;
+}
+.job_size_inputs_cm{
+  height:1.5rem;
+}
+.job_size_inputs_cm input{
+  width: 40%;
+  height:1.5rem;
+  font-size: 0.9rem;
+  padding:0px;
+  text-align:center;
+}
+#jobSizeModal .job_size{
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  overflow:visible;
+  white-space:nowrap;
+}
+#jobSizeModal .job_size_label{
+  margin: auto;
+  text-align: center;
+  font-weight: 600;
+}
+#jobSizeModal .job_size_inputs{
+  margin: auto;
+}
+.text-center{
+  text-align:center;
+}
+#cuts_actual{
+  padding-right: 0.6rem;
+}
+#cuts_approx{
+  padding-left: 0.6rem;
+}
+#editHSNCode .modal-content{
+  width: 50%;
+}
+#editHSNCode .w-50, #editHSNCode .div-3{
+  float: left;
+  padding: 0 1%;
+}
+#editHSNCode .w-50 input, #editHSNCode .div-3 input{
+  text-align: left;
+}
+#editHSNCode h4{
+  margin: 0.5rem 0;
+}
+#editHSNCode{
+  z-index:200;
+}
+#invoice-text-tab .row.terms{
+	height: 10rem !important;
+  margin-top: 1rem;
+}
+#invoice-text-tab .label{
+  width: 100%;
+  text-align: right;
+  font-weight: 600;
+  padding-right: 0.5rem;
+}
+#invoice-text-tab .label.terms{
+	width:16%;
+  height: 10rem;
+  transform: translate(0,-50%);
+}
+#invoice_terms{
+  width: 83%;
+}
+@keyframes rotate {
+  100%{    transform: rotate(360deg)}
+}
+
+@keyframes pgs_to_process{
+  0% { background: #fff; width: 50%;}
+  50% { background: red; width: 90%;}
+  100% { background: #fff; width: 50%;}
+}
+
+@keyframes animate-bg{
+  0% { color: #000; background-color:#fff;}
+  50% { color: #fff;background-color:#2e2efb;}
+  100% { color: #000;background-color:#fff;}
+}
+
+@keyframes pgs_to_process_title{
+  0% { color: #000; background-color:rgb(221,221,221);}
+  50% { color: #fff;background-color:red;}
+  100% { color: #000;background-color:rgb(221,221,221);}
+}
+#svg_test{
+  width : 90%;
+  height : 90%;
+  position: absolute;
+}
+#svg_test svg{
+  width: 100%;
+  height: 100%;
+}
+.selected_job_size_option,.selected_job_size_wstg{
+  display: none;
+}
+.result_div:nth-child(3) .row div{
+	width: 26%;
+}
+.result_div.single_sheet .row div{
+	width: 24%;
+}
+.result_div.single_sheet .row div.title{
+  width:27%;
+	overflow: visible;
+}
+.result_div:nth-child(3) .row div.title{
+	width: 21%;
+	overflow: visible;
+}
+.result_div .res div{
+	width: auto !important;
+  float: unset;
+  display: inline;
+}
+.result_div .res{
+  text-align:right;
+}
+.click_to_expand{
+  width:90%;
+  margin-left:5%;
+  /*
+  position: absolute;
+  bottom: 0px;
+  margin-left: 0.5rem;
+  */
+}
+#customColorRateModal input{
+  background: transparent;
+  border: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 3rem;
+}
+#PDF_Options_Quotation .modal-content{
+  width: 60%;
+}
+#PDF_Options_Quotation .row{
+  display: flex;
+}
+#quotationModal{
+  z-index: 200;
+}
+#swap_mc_size{
+  position: absolute;
+  right: -2.5rem;
+  font-size: 2rem;
+}
+.middle-container{
+  flex-grow:1;
+  display:flex;
+  height:unset;
+}
+.bottom-row button:last-child{
+  margin-right:0;
+}
+.signatures>svg{
+  width: 100%;
+}
+.impose_div{
+  position: sticky;
+  top:0;
+  display:flex !important;
+  background:#fff;
+}
+.impose_div label{
+  width:30%;
+  text-align:right;
+}
+.impose_div .impose_row{
+  margin-bottom:0.2rem;
+}
+.impose_div .impose_content{
+  font-weight: 400;
+    border: 1px solid #a5a1a1;
+    width: 75%;
+    font-size: 0.9rem;
+    padding: 0.1rem;
+    padding-left: 0.55rem;
+    border-radius: 2px;
+}
+.impose_div svg{
+  width: 660px;
+  flex-shrink: 0;
+}
+.impose_div .paper_details{
+  flex-grow:1;
+  margin-left: 1rem;
+}
+.impose_div svg{
+}
+#book_title .inner_pgs_printed{
+  width: unset;
+  transform: translate(-40%, 0px);
+}
+#PDF_Options_Job_Ticket select{
+  border: none;
+  background: #fff;
+  margin: 0;
+  height: 100%;
+  width 100%;
+}
+#PDF_Options_Job_Ticket input{
+  background: #fff;
+  margin: 0;
+  height: 100%;
+}
+#PDF_Options_Job_Ticket .worktype_select{
+  margin: 0.25rem 0;
+}
+#PDF_Options_Job_Ticket .binding_type{
+  margin:0;
+  padding:0 !important;
+  width:100%;
+  height:100%;
+}
+#PDF_Options_Job_Ticket .binding_type select{
+  width:100%;
+  height:100% !important;
+}
+#inputsModal .paper_name{
+    white-space: nowrap;
+    border-right: none;
+    font-weight: 600;
+    font-size:1.4rem;
+}
+#inputsModal .modal-footer {
+  justify-content:center;
+}
+.job_size_cuts .table-row{
+  background: #fff;
+  height:2rem
+}
+.job_size_cuts .table-row div,
+.job_size_cuts .table-row label{
+  border:none;
+  white-space:nowrap;
+  padding-right:0.2rem;
+  padding-left:0;
+}
+.job_size_cuts .table-row label{
+  text-align:right;
+}
+.legend{
+  border: 1px solid #000 !important;
+  display: inline-block !important;
+  height: 1rem;
+  width: 1.5rem;
+  padding: 0 !important;
+}
+.legend.white{
+  background:#fff;
+}
+.legend.green{
+  background: rgba(135,171,49,0.5);
+}
+.legend.gray{
+  background: #eddf9c;
+}
+.swap_mc_size{
+  font-size:1.2rem;
+}
+.svg_title{
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+#Spot_color .modal-footer .footer{
+  display:flex;
+}
+#Spot_color .modal-footer .footer div{
+  display:flex;
+}
+#Spot_color .modal-footer .footer div input{
+  line-height: 1rem;
+  margin-top: 0.5rem;
+}
+#Spot_color .modal-footer .footer div label{
+  margin-top: 0.5rem;
+}
+.calc_colors{
+  white-space: nowrap;
+}
+#plate_cost_min_pref .div-2:first-child{
+  padding-right:1rem;
+}
+#plate_cost_min_pref .div-2:nth-child(2){
+  padding-left:1rem;
+}
+#plate_cost_min_pref .print_base{
+  margin-right: 1rem;
+}
+#plate_cost_min_pref .min_plate_print{
+  font-weight:600
+}
+#plate_cost_min_pref h3{
+  font-size:1.6rem;
+  text-align:center;
+}
+#plate_cost_min_pref input[type="radio"]{
+  display:block;
+  height:3rem;
+}
+.grid{
+  display:grid;
+}
+#Spot_color_table .grid{
+  grid-template-columns: 32% 32% 32%;
+}
+#Spot_color_table .grid .grid-row:nth-child(3n+0){
+  border-right: 1px solid #959595;
+}
+#Spot_color_table .grid .grid-row:nth-child(3n+1){
+  border-left: 1px solid #959595;
+  border-right: 1px solid #959595;
+}
+#Spot_color_table .grid .grid-row:nth-child(3n+2){
+  border-right: 1px solid #959595;
+}
+#Spot_color_table .grid .grid-row{
+  border-bottom: 1px solid #959595;
+}
+#Spot_color_table .grid .grid_header:first-child{
+  border-right:none;
+}
+#Spot_color_table .grid .grid_header:nth-child(2){
+  border-right:none;
+  text-align:center;
+}
+#PMS_color_table .grid{
+  grid-template-columns: 32% 32% 32%;
+  margin-left: 4%;
+}
+#PMS_color_table .grid .grid-row:nth-child(3n+0){
+  border-right: 1px solid #959595;
+}
+#PMS_color_table .grid .grid-row:nth-child(3n+1){
+  border-left: 1px solid #959595;
+  border-right: 1px solid #959595;
+}
+#PMS_color_table .grid .grid-row:nth-child(3n+2){
+  border-right: 1px solid #959595;
+}
+#PMS_color_table .grid .grid_header:first-child{
+  border-right:none;
+}
+#PMS_color_table .grid .grid_header:nth-child(2){
+  border-right:none;
+  text-align:center;
+}
+#PMS_color_table .grid .grid-row{
+  border-bottom: 1px solid #959595;
+}
+#Spot_color{
+  text-transform: uppercase;
+}
+.grid_header{
+  font-weight: 600;
+  padding: 0.2rem 0.5rem;
+  border-top: 1px solid #959595;
+  background: #fff !important;
+}
+#print_calculation_div input[type="radio"]{
+  display:inline;
+  width:1rem;
+  height:1rem;
+}
+#print_calculation_div{
+  text-align:center;
+  font-size: 1.2rem;
+}
+.job_size_inner{
+  height: 80vh;
+}
+.cutting_diagram{
+  padding: 2rem;
+}
+.warehouse_name{
+  display:none;
+}
+#plate_cost_min_pref .table input{
+  border: 1px solid #959595;
+  width: 4rem;
+}
+#plate_cost_min_pref .table-row div{
+  white-space:nowrap;
+}
+#plate_cost_min_pref .modal-body .flex>div:first-child{
+  padding-right: 1rem;
+}
+#plate_cost_min_pref .modal-body .flex>div:nth-child(2){
+  padding-left: 1rem;
+}
+#plate_cost_min_pref .table-header>div{
+  border-top: 2px solid #000;
+}
+#plate_cost_min_pref .table-row:last-child>div{
+  border-bottom: 2px solid #000;
+}
+#plate_cost_min_pref .table-row>div:last-child{
+  border-right: 2px solid #000;
+}
+#plate_cost_min_pref .table-header>div:last-child{
+  border-right: 2px solid #000;
+}
+#plate_cost_min_pref .table-row>div:first-child{
+  border-left: 2px solid #000;
+}
+#plate_cost_min_pref .table-header>div:first-child{
+  border-left: 2px solid #000;
+}
+#plate_cost_min_pref .table-row>div:nth-child(4){
+  border-right: 2px solid #000;
+}
+#plate_cost_min_pref .table-header>div:nth-child(4){
+  border-right: 2px solid #000;
+}
+#plate_cost_min_pref .table-row>div:nth-child(5){
+  text-align:center;
+}
+#plate_cost_min_pref .table-row input{
+  text-align:center;
+}
+#adjustPaperStockModal .add_qty,
+#addPaperStockModal .add_qty,
+#addPaperStockModal input.cost{
+  width:4rem;
+}
+#adjustPaperStockModal .column{
+  padding:0.5rem;
+}
+#main-content{
+  background: #fff;
+  margin: 0.5vw;
+  width: calc(100% - 1vw);
+  height: calc(100% - 9rem);
+  margin-top: 0;
+}
+#main-content .row{
+  padding: 0.2rem;
+  display:flex;
+}
+#main-content .row > div{
+  padding: 0.2rem 0.5rem;
+}
+.bottom-row.dashboard{
+  position: fixed;
+  bottom: 0.5vh;
+}
+#previewModal .modal-content{
+  height:95%;
+}
+#previewModal .modal-body{
+  max-height:unset;
+  height: calc(100% - 3.5rem);
+}
+#previewModal .preview_frame{
+  height:100%;
+  width:100%
+}
+#main-content .main-header{
+  display:flex;
+  background: #f09423;
+  font-weight:600;
+  position: sticky;
+  top:0;
+  height: 3.5rem;
+}
+
+#main-content .main-footer{
+  position: sticky;
+  bottom:0;
+  background:#799a27;
+  height: 3.5rem;
+  padding-top: 0.5rem;
+}
+
+#main-content .main-header input{
+  width:5rem;
+}
+
+#main-content .main-header div{
+  width:unset;
+  margin:0.5rem;
+}
+#main-content .inner-content{
+  height: calc(100% - 7rem);
+  overflow-y:scroll;
+}
+
+#main-content .main-footer{
+  display:flex;
+  justify-content:space-between;
+}
+
+#main-content .main-footer .pages{
+  margin-left:1rem;
+}
+#main-content .main-header .main-title{
+  margin: 0.5rem 1rem;
+}
+.dashboard.modal-footer{
+  height: 10vh;
+  justify-content:center;
+}
+.calculation_page{
+  display:flex !important;
+  align-items: end;
+  flex-grow:1;
+  width:95vw;
+  justify-content:center;
+  font-size:3rem;
+  font-weight:600;
+  opacity:0.2;
+  z-index:1;
+}
+#BindingModal.bindingModule{
+  position: fixed;
+  width: 100%;
+  height:fit-content;
+  display:flex;
+  align-items:center;
+  top:50%;
+  transform:translatey(-50%);
+}
+#main-content.binding{
+  background:#000;
+}
+.customer_details .label{
+  padding-right: 0.5rem;
+}
+.customer_details .state,
+.customer_details .email{
+  padding-right: 0.5rem;
+}
+.customer_details .address{
+  background: #ddd;
+  width: 100%;
+  height: 5.5rem;
+  border-radius: 5px;
+  color: rgb(84,84,84);
+  border:none !important;
+}
+.customer_details div:first-child{
+  margin-bottom: 0.5rem;
+}
+.customer_details .label{
+  width: 6rem;
+}
+.customer_details .email_phone{
+  text-align:left;
+}
+.customer_details input,
+.customer_details textarea{
+  padding-left:0.5rem;
+}
+.settings_top:first-child{
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+.quote_no_input.binding_number{
+  width: 20%;
+}
+.date_input.binding_date{
+  width:39%;
+}
+#main-content.binding{
+  display:flex;
+  justify-content: end;
+  flex-flow: column;
+  align-items: center;
+}
+.blank_content_binding{
+  color: #b1b1b1;
+  font-size:3rem;
+  font-weight:600;
+}
+.no-wrap{
+  white-space: nowrap;
+}
+#pdf_desc_div .label{
+  margin-right:1rem;
+}
+#pdf_desc_div .book_size{
+  text-align:left;
+  padding-left: 0.5rem;
+}
+#binding_pdf_desc_div{
+  float: right;
+  position: relative;
+  flex-grow: 1;
+  padding: 0 0.5rem;
+  background: #ddd;
+  border-radius: 5px;
+  display: flex;
+  flex-flow:column;
+  justify-content: space-between;
+}
+#binding_pdf_desc_div input{
+  text-align:left;
+  padding: 0;
+  padding-left: 0.5rem;
+  height: unset;
+  margin:0;
+}
+#binding_pdf_desc_div .book_size{
+  padding: 0;
+  float: unset;
+  width:100%;
+  color:rgb(84,84,84);
+}
+#binding_pdf_desc_div .book_size_label{
+  float:unset;
+}
+#PDF_Options_Quotation{
+  z-index:190;
+}
+#PDF_Options_Delivery{
+  z-index:190;
+}
+#PDF_Options_Invoice{
+  z-index:190;
+}
+.overprint_qty{
+  width: 33%;
+  margin-left: 3%;
+}
+#overprint_qty{
+  width:29% !important;
+}
+.inner_pgs_printed_div div{
+  width: 18rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align:center;
+  background: #fff;
+}
+.inner_pgs_printed_div{
+  font-weight: 600;
+  white-space: nowrap;
+  width: max-content;
+  cursor:pointer;
+}
+.inner_pgs_printed_div .selected{
+  background-color: #f09423;
+}
+#book_title .ups_in_plate input{
+  background:#ddd;
+}
+.inner_pgs_printed_div .fa-caret-down{
+  width:5rem;
+  text-align:center;
+  height: 1rem;
+  line-height: 1rem;
+  position: absolute;
+}
+.inner_pgs_printed_div .fa-caret-down::before{
+  height: 1rem;
+  line-height: 1rem;
+  position: relative;
+  top: -1rem;
+  left: 0;
+  font-size:2rem;
+  color:#fff;
+}
+.inner_pgs_printed_div div:nth-child(2){
+  margin-top:0.5rem;
+}
+.worktype, 
+.worktype_2,
+.outs_pieces_per_sig_part,
+.outs_pieces_per_sig_part_2{
+  display: none !important;
+}
+.worktype.impose_content{
+  display: block !important;
+}
+.worktype_row, .outs_pieces_per_sig, .forme, .color_plates, .forme_plates{
+  height: 1.8rem;
+  line-height: 1.8rem;
+  padding: 0 0.5rem;
+  margin: 0.5rem 0;
+  white-space: nowrap;
+}
+#PDF_Options_Job_Ticket .table-header .outs_pieces_per_sig{
+  line-height:1.3rem;
+}
+#PDF_Options_Job_Ticket .pre-press.single .plate_inks{
+  width: 100%;
+}
+.saddle_sig{
+}
+#PDF_Options_Job_Ticket .job-work div.job_source{
+  width: 2rem;
+}
+#Process_PO_Modal{
+  z-index:2500;
+}
+#Process_PO_Modal .po_inputs textarea.notes{
+  width: 30rem;
+  height:7rem;
+}
+#Process_PO_Modal .po_inputs>div{
+  padding: 0 0.5rem;
+}
+
+.bg-white{
+  background:#fff !important;
+}
+.bg-green{
+  background: #799a27 !important;
+}
+#stationeryBinding .Binding_Charges div{
+  text-align:center;
+  padding-right: 20%;
+}
+#stationeryBinding .Binding_Charges_Text{
+  white-space: nowrap;
+  padding-right: 0.5rem;
+}
+#Process_PO_Modal .process_details>.row, 
+#Process_PO_PDF_Modal .process_details>.row,
+#Process_PO_PDF_Modal_in_house .process_details>.row{
+  display: flex;
+}
+#Process_PO_PDF_Modal .modal-content,
+#Process_PO_PDF_Modal_in_house .modal-content{
+  width:60%;
+}
+#Process_PO_PDF_Modal,
+#Process_PO_PDF_Modal_in_house{
+  z-index:2500;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .modal-header{
+  text-align:center;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .modal-header .close{
+  display:none;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .modal-header,
+#PDF_Options_Job_Ticket .purchase-orders .po .modal-footer{
+  background: none;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po{
+  border: 1px solid #000;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .modal-body{
+  padding-top:0;
+  max-height: max-content;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po_div{
+  margin-top:2rem;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .company_name_div,
+#Process_PO_PDF_Modal .company_name_div{
+  text-align:center;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po .company_name,
+#Process_PO_PDF_Modal .company_name{
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+#Process_PO_PDF_Modal .modal-btn,
+#Process_PO_PDF_Modal_in_house .modal-btn{
+  display:none;
+}
+.no-borders{
+  border: none !important;
+}
+#inputsModal .paper_name{
+  width: 100%;
+  display: block;
+  margin-bottom: 1rem;
+}
+.process_details.table{
+	width:max-content;
+  max-width: 100%;
+}
+.process_details.table .table-row label{
+	text-align:right;
+	padding-left: 1rem;
+}
+.process_details.table .table-row{
+	line-height:1.8rem;
+	background: #fff;
+}
+.process_details.table select,
+.process_details.table input{ 
+    background: #f09423;
+    margin: 0;
+    margin-left:-0.5rem;
+    height: 1.8rem;
+    padding: 0 0.5rem;
+    line-height: 1.8rem;
+    width: calc(100% + 1rem);
+    border: none;
+}
+.process_details.table select:focus-visible,
+.process_details.table input:focus-visible{
+  border:none;
+}
+.process_details.table .table-row div{
+  margin:0;
+  padding:0 0.5rem;
+}
+#PDF_Options_Job_Ticket .job_ticket_number{
+  padding-right:2rem;
+}
+#Process_PO_Modal div.other-selected{
+  display: grid !important;
+  grid-template-columns: auto auto;
+}
+#PDF_Options_Job_Ticket .purchase-orders .po button.modal-btn{
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  box-shadow: none;
+}
+#PDF_Options_Job_Ticket .po .vendor_div{
+  display:none !important;
+}

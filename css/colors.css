@@ -1,0 +1,31 @@
+:root{
+  --top-color : hsl(33deg, 87%, 54%);
+  --bottom-color : hsl(77deg, 60%, 38%);
+  --modal-background : hsla(0deg, 0%, 0%, 0.4);
+}
+
+body{
+  --background : hsl(0deg, 0%, 87%);
+}
+
+nav{
+  --background : hsl(0deg, 0%, 10%);
+  --border-color : hsl(0deg, 0%, 24%);
+}
+
+nav ul{
+  --color : hsl(0deg,0%, 73%);
+}
+
+nav ul li:hover{
+  --background : hsl(0deg, 0%, 40%);
+  --color : hsl(0deg, 0%, 100%);
+}
+
+nav ul li ul {
+  --background : hsl(0deg, 0%, 30%);
+}
+
+.logo{
+  --background : hsl(0deg, 0%, 0%);
+}

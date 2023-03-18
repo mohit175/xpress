@@ -1,0 +1,10 @@
+form{
+  --padding : 3rem;
+}
+
+form h2{
+  --color : #2710c6;
+  --font-size : 2rem;
+}
+
+

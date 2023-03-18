@@ -1,0 +1,208 @@
+body{
+  font-family: "sans-serif";
+}
+.left-menu{
+  float: left;
+  width: 20%;
+}
+.right-side{
+  float: right;
+  width: 80%;
+}
+.row{
+  width: 100%;
+  min-height: 2em;
+}
+.row div{
+  float: left;
+}
+.cust_num{
+  width: 5%;
+}
+.firstname{
+  width: 15%;
+  cursor:pointer;
+}
+.lastname{
+  width: 15%;
+}
+.email{
+  width: 28%;
+  overflow: hidden;
+}
+.contact{
+  width: 15%;
+}
+.actions{
+  width: 22%;
+  font-weight: 900;
+}
+.fa-circle-check, .fa-unlock{
+  color: #0da904;
+}
+.fa-circle-xmark, .fa-lock{
+  color: #f30505;
+}
+.left-menu ul li{
+  display:block;
+  font-weight:700;
+  font-size: 1.5em;
+  width: 80%;
+  padding-left: 10%;
+  background-color: #20b74e;
+  margin-bottom: 0.5em;
+  cursor: pointer;
+}
+#users .row, #messages .row{
+  background-color:#ddd;
+  width: 99%;
+  margin-bottom: 0.5em;
+  border: 1px solid #bbb;
+  padding: 2px;
+  padding-left: 10px;
+  display: table-row;
+}
+#config .row{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+#config .row div{
+  width: unset;
+  float: unset;
+  display: flex;
+  flex-flow: column;
+}
+
+h1{
+  text-align:center;
+}
+.actions i{
+  cursor: pointer;
+  padding-left: 5px;
+}
+/* modal css for all modals*/
+.modal {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-header {
+	background-color: #f09423;
+	padding: 20px;
+	font-size: 2em;
+}
+
+.modal-footer {
+	background-color: #799a27;
+	padding: 10px;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #545353;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hide{
+  display: none !important;
+}
+
+#changePass{
+  display: inline-block;
+}
+
+#changePass .row{
+  font-size: 1.1em;
+}
+
+.modal-body.row{
+  min-height: 4em;
+}
+
+.col-6{
+  width: 44%;
+  padding-left: 5%;
+  float: left;
+}
+
+#changePass input{
+  line-height: 2em;
+}
+
+#changePass .modal-content{
+	background: #ddd;
+}
+
+#changePass .modal-content{
+	width: 40%;
+}
+
+#changePass .modal-footer button{
+	float: right;
+}
+
+.modal-header .header{
+  width: 100%;
+}
+#editUser{
+  display: block;
+}
+#editUser .row{
+  margin: 0px;
+  padding: 0px;
+}
+#editUser .col-6{
+  width:50%;
+}
+#editUser .col-6, #editUser .col-12{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#editUser .modal-content{
+  margin-top:3%;
+}
+.address-container{
+  width: 100%;
+}
+#plan_lifetime{
+  appearance: auto;
+  width: 2rem;
+  height: 2rem;
+}
+.container{
+  max-width: 100vw;
+}
+#users, #messages{
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+#users .row div, #messages .row div{
+  width: unset;
+  display: table-cell;
+  border: 1px solid #fff;
+  border-bottom: 5px solid #fff;
+  float: unset;
+}
